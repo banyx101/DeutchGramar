@@ -1,0 +1,2676 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="artifact-type" content="narrative">
+  <meta name="design-style" content="briefing">
+  <title>German Grammar Midterm Study Hub — Deutsch 2B &amp; 3 Reference</title>
+  <link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,600;0,8..60,700;1,8..60,400&family=Plus+Jakarta+Sans:wght@400;500;600;700&family=Geist+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      color-scheme: light;
+
+      /* Page and surfaces: warm stone-white paper */
+      --background: #faf9f5;
+      --surface-container-low: #ffffff;
+      --surface-container: #f1efe8;
+      --surface-container-high: #e6e2d6;
+
+      /* Ink */
+      --on-surface: #17181a;
+      --on-surface-variant: #56585c;
+
+      /* Rules */
+      --outline: #17181a;
+      --outline-variant: #dedad0;
+      --border-control: #c8c4b8;
+
+      /* Accents */
+      --primary: #17181a;
+      --on-primary: #faf9f5;
+      --primary-container: #f2b705;
+      --on-primary-container: #17181a;
+      --secondary: #1f4e5f;
+      --tertiary: #785008;
+      --tertiary-container: #f5e6c4;
+      --error: #b42318;
+      --on-error: #ffffff;
+
+      /* Data series */
+      --data-1: #1f4e5f;
+      --data-2: #d99000;
+      --data-3: #2b6e52;
+      --data-4: #b84a39;
+      --data-context: #c4bfb2;
+
+      /* Fonts */
+      --font-headline: 'Source Serif 4', serif;
+      --font-body: 'Plus Jakarta Sans', sans-serif;
+      --font-label: 'Geist Mono', monospace;
+
+      /* Shape */
+      --rounded: 0.25rem;
+      --rounded-lg: 0.375rem;
+      --rounded-full: 0.25rem;
+
+      /* Style effects */
+      --section-rule: 1.5px solid var(--outline);
+      --card-border: 1px solid var(--outline-variant);
+      --control-border: 1px solid var(--border-control);
+      --badge-radius: 2px;
+      --heading-tracking: -0.02em;
+      --label-tracking: 0.08em;
+
+      /* Semantic & Case Color-Coding (all >= 4.5:1 text contrast on white/tints) */
+      --positive: #2b6e52;
+      --positive-bg: #eaf4ef;
+      --warning: #785008;
+      --warning-bg: #fdf4db;
+      --error-bg: #fbeceb;
+      --focus: #1f4e5f;
+
+      --case-nom: #2b6e52;
+      --case-nom-bg: #eaf4ef;
+      --case-akk: #1f4e5f;
+      --case-akk-bg: #e9f2f5;
+      --case-dat: #b42318;
+      --case-dat-bg: #fbeceb;
+      --case-wechsel: #785008;
+      --case-wechsel-bg: #fdf4db;
+
+      /* Type scale (Narrative) */
+      --display-size: clamp(2.25rem, 1.5rem + 3.2vw, 3.6rem);
+      --headline-size: clamp(1.625rem, 1.25rem + 1.5vw, 2.25rem);
+      --subhead-size: clamp(1.125rem, 1.05rem + 0.45vw, 1.375rem);
+      --body-size: clamp(1rem, 0.96rem + 0.2vw, 1.0625rem);
+      --label-size: clamp(0.75rem, 0.72rem + 0.12vw, 0.8125rem);
+
+      /* Spacing scale (4pt base) */
+      --space-xs: 0.25rem;
+      --space-sm: 0.5rem;
+      --space-md: 1rem;
+      --space-lg: 1.5rem;
+      --space-xl: 2.5rem;
+      --space-2xl: 4rem;
+      --space-3xl: 6rem;
+
+      /* Motion */
+      --ease-out: cubic-bezier(0.16, 1, 0.3, 1);
+      --ease-in-out: cubic-bezier(0.65, 0, 0.35, 1);
+      --dur-micro: 120ms;
+      --dur-short: 220ms;
+      --dur-long: 420ms;
+    }
+
+    /* Base reset */
+    *, *::before, *::after { box-sizing: border-box; }
+    html, body {
+      overflow-x: clip;
+      margin: 0;
+      padding: 0;
+      background-color: var(--background);
+      color: var(--on-surface);
+      font-family: var(--font-body);
+      font-size: var(--body-size);
+      line-height: 1.6;
+      scroll-behavior: smooth;
+    }
+    header { position: static !important; }
+
+    .page-grid {
+      display: grid;
+      grid-template-columns: minmax(0, 1fr);
+      gap: var(--space-xl);
+      padding: var(--space-lg);
+      max-width: 1180px;
+      margin: 0 auto;
+      overflow: hidden;
+    }
+    .page-grid * { min-width: 0; }
+
+    /* Focus rings */
+    :focus-visible {
+      outline: 3px solid var(--focus);
+      outline-offset: 2px;
+    }
+
+    /* Typography */
+    h1, h2, h3, h4 {
+      font-family: var(--font-headline);
+      font-weight: 600;
+      letter-spacing: var(--heading-tracking);
+      color: var(--on-surface);
+      margin: 0;
+    }
+    p {
+      margin: 0;
+      max-width: 68ch;
+    }
+    code, .mono {
+      font-family: var(--font-label);
+    }
+
+    /* Dossier Header & Bars */
+    .dossier-bar {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: space-between;
+      gap: var(--space-sm);
+      border-bottom: var(--section-rule);
+      padding-bottom: var(--space-sm);
+      margin-bottom: var(--space-md);
+    }
+    .dossier-bar-left {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      gap: var(--space-sm);
+    }
+    .dossier-pill {
+      background: var(--primary-container);
+      color: var(--on-primary-container);
+      font-family: var(--font-body);
+      font-weight: 700;
+      font-size: 0.6875rem;
+      letter-spacing: var(--label-tracking);
+      text-transform: uppercase;
+      padding: var(--space-xs) var(--space-sm);
+      border-radius: var(--badge-radius);
+      display: inline-block;
+    }
+    .dossier-meta {
+      font-family: var(--font-label);
+      font-size: var(--label-size);
+      color: var(--on-surface-variant);
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+    }
+    .index-num {
+      font-family: var(--font-label);
+      font-weight: 600;
+      font-size: var(--label-size);
+      color: var(--secondary);
+      background: var(--surface-container);
+      padding: var(--space-xs) var(--space-sm);
+      border-radius: var(--badge-radius);
+    }
+
+    .title {
+      font-size: var(--display-size);
+      line-height: 1.08;
+      margin-bottom: var(--space-sm);
+    }
+    .standfirst {
+      font-family: var(--font-body);
+      font-weight: 600;
+      font-size: var(--subhead-size);
+      line-height: 1.45;
+      color: var(--secondary);
+      max-width: 68ch;
+    }
+
+    .section-title {
+      font-size: var(--headline-size);
+      line-height: 1.12;
+      margin-bottom: var(--space-xs);
+    }
+    .section-lead {
+      font-family: var(--font-body);
+      font-weight: 500;
+      color: var(--on-surface-variant);
+      margin-bottom: var(--space-lg);
+      max-width: 68ch;
+    }
+
+    /* Case Legend Pills & Inline Case Highlights */
+    .case-legend-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(min(220px, 100%), 1fr));
+      gap: var(--space-sm);
+      margin-top: var(--space-lg);
+    }
+    .case-legend-item {
+      background: var(--surface-container-low);
+      border: var(--card-border);
+      border-radius: var(--rounded-lg);
+      padding: var(--space-sm) var(--space-md);
+      display: flex;
+      flex-direction: column;
+      gap: var(--space-xs);
+    }
+    .case-badge {
+      display: inline-flex;
+      align-items: center;
+      font-family: var(--font-label);
+      font-weight: 600;
+      font-size: 0.75rem;
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+      padding: var(--space-xs) var(--space-sm);
+      border-radius: var(--badge-radius);
+      width: fit-content;
+    }
+    .case-nom {
+      background: var(--case-nom-bg);
+      color: var(--case-nom);
+      border-left: 3px solid var(--case-nom);
+    }
+    .case-akk {
+      background: var(--case-akk-bg);
+      color: var(--case-akk);
+      border-left: 3px solid var(--case-akk);
+    }
+    .case-dat {
+      background: var(--case-dat-bg);
+      color: var(--case-dat);
+      border-left: 3px solid var(--case-dat);
+    }
+    .case-wechsel {
+      background: var(--case-wechsel-bg);
+      color: var(--case-wechsel);
+      border-left: 3px solid var(--case-wechsel);
+    }
+
+    .tok-nom {
+      background: var(--case-nom-bg);
+      color: var(--case-nom);
+      font-weight: 700;
+      padding: 0.08rem 0.35rem;
+      border-radius: var(--badge-radius);
+    }
+    .tok-akk {
+      background: var(--case-akk-bg);
+      color: var(--case-akk);
+      font-weight: 700;
+      padding: 0.08rem 0.35rem;
+      border-radius: var(--badge-radius);
+    }
+    .tok-dat {
+      background: var(--case-dat-bg);
+      color: var(--case-dat);
+      font-weight: 700;
+      padding: 0.08rem 0.35rem;
+      border-radius: var(--badge-radius);
+    }
+    .tok-wechsel {
+      background: var(--case-wechsel-bg);
+      color: var(--case-wechsel);
+      font-weight: 700;
+      padding: 0.08rem 0.35rem;
+      border-radius: var(--badge-radius);
+    }
+    .tok-verb {
+      background: var(--tertiary-container);
+      color: var(--tertiary);
+      font-weight: 700;
+      padding: 0.08rem 0.35rem;
+      border-radius: var(--badge-radius);
+    }
+
+    /* KPI / Figure Cards */
+    .kpi-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(min(210px, 100%), 1fr));
+      gap: var(--space-md);
+      margin-top: var(--space-lg);
+    }
+    .figure-card {
+      background: var(--surface-container-low);
+      border: var(--card-border);
+      border-radius: var(--rounded-lg);
+      padding: var(--space-md) var(--space-lg);
+      display: flex;
+      flex-direction: column;
+      gap: var(--space-xs);
+    }
+    .figure-card .kpi-label {
+      font-family: var(--font-label);
+      font-size: var(--label-size);
+      color: var(--on-surface-variant);
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+    }
+    .figure-card .value {
+      font-family: var(--font-headline);
+      font-weight: 600;
+      font-size: clamp(1.5rem, 1.2rem + 1vw, 2rem);
+      line-height: 1.1;
+      font-variant-numeric: lining-nums tabular-nums;
+      color: var(--on-surface);
+    }
+    .figure-card .kpi-sub {
+      font-size: 0.875rem;
+      color: var(--on-surface-variant);
+    }
+
+    /* Navigation Index Strip */
+    .topic-nav {
+      background: var(--surface-container-low);
+      border: var(--card-border);
+      border-radius: var(--rounded-lg);
+      padding: var(--space-md);
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: space-between;
+      gap: var(--space-sm);
+    }
+    .topic-nav-links {
+      display: flex;
+      flex-wrap: wrap;
+      gap: var(--space-xs);
+    }
+    .nav-jump {
+      display: inline-flex;
+      align-items: center;
+      gap: var(--space-xs);
+      min-height: 44px;
+      padding: var(--space-xs) var(--space-sm);
+      border: var(--card-border);
+      border-radius: var(--rounded);
+      background: var(--background);
+      color: var(--on-surface);
+      text-decoration: none;
+      font-size: 0.875rem;
+      font-weight: 600;
+      transition: background-color var(--dur-micro) var(--ease-out), border-color var(--dur-micro) var(--ease-out);
+    }
+    .nav-jump:hover {
+      background: var(--surface-container-high);
+      border-color: var(--outline);
+    }
+    .nav-jump .num {
+      font-family: var(--font-label);
+      font-size: 0.75rem;
+      color: var(--secondary);
+    }
+
+    /* Buttons & Controls */
+    .btn {
+      font-family: var(--font-body);
+      font-weight: 600;
+      font-size: 0.9375rem;
+      min-height: 44px;
+      padding: var(--space-xs) var(--space-md);
+      border-radius: var(--rounded);
+      cursor: pointer;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: var(--space-xs);
+      border: 1px solid transparent;
+      transition: background-color var(--dur-micro) var(--ease-out), color var(--dur-micro) var(--ease-out), transform var(--dur-micro) var(--ease-out);
+    }
+    .btn:active {
+      transform: translateY(1px);
+    }
+    .btn:disabled {
+      opacity: 0.5;
+      cursor: not-allowed;
+    }
+    .btn-primary {
+      background: var(--primary);
+      color: var(--on-primary);
+    }
+    .btn-primary:hover:not(:disabled) {
+      background: var(--secondary);
+    }
+    .btn-secondary {
+      background: var(--surface-container-low);
+      color: var(--on-surface);
+      border: var(--control-border);
+    }
+    .btn-secondary:hover:not(:disabled) {
+      background: var(--surface-container-high);
+    }
+    .btn-gold {
+      background: var(--primary-container);
+      color: var(--on-primary-container);
+      border: 1px solid var(--outline);
+    }
+    .btn-gold:hover:not(:disabled) {
+      background: var(--surface-container-high);
+    }
+
+    .pill-group {
+      display: flex;
+      flex-wrap: wrap;
+      gap: var(--space-xs);
+      margin-bottom: var(--space-md);
+    }
+    .filter-pill {
+      font-family: var(--font-body);
+      font-weight: 600;
+      font-size: 0.875rem;
+      min-height: 44px;
+      padding: var(--space-xs) var(--space-md);
+      border-radius: var(--rounded);
+      border: var(--control-border);
+      background: var(--surface-container-low);
+      color: var(--on-surface);
+      cursor: pointer;
+      transition: background-color var(--dur-micro) var(--ease-out), color var(--dur-micro) var(--ease-out);
+    }
+    .filter-pill:hover {
+      background: var(--surface-container-high);
+    }
+    .filter-pill.active {
+      background: var(--primary);
+      color: var(--on-primary);
+      border-color: var(--primary);
+    }
+
+    /* Callouts & Asides */
+    .aside-box {
+      background: var(--surface-container);
+      border-top: var(--section-rule);
+      padding: var(--space-md) var(--space-lg);
+      border-radius: 0 0 var(--rounded-lg) var(--rounded-lg);
+      display: flex;
+      flex-direction: column;
+      gap: var(--space-xs);
+    }
+    .aside-title {
+      font-family: var(--font-label);
+      font-weight: 600;
+      font-size: var(--label-size);
+      text-transform: uppercase;
+      letter-spacing: var(--label-tracking);
+      color: var(--secondary);
+    }
+
+    /* Section Layout Helpers */
+    .study-section {
+      display: flex;
+      flex-direction: column;
+      gap: var(--space-md);
+      padding-top: var(--space-md);
+    }
+    .split-grid {
+      display: grid;
+      grid-template-columns: minmax(0, 1.35fr) minmax(0, 1fr);
+      gap: var(--space-lg);
+      align-items: start;
+    }
+    .two-col-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(min(300px, 100%), 1fr));
+      gap: var(--space-lg);
+    }
+    .three-col-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(min(240px, 100%), 1fr));
+      gap: var(--space-md);
+    }
+
+    /* Tables */
+    .table-wrap {
+      overflow-x: auto;
+      background: var(--surface-container-low);
+      border: var(--card-border);
+      border-radius: var(--rounded-lg);
+    }
+    table.grammar-table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 0.9375rem;
+    }
+    table.grammar-table th {
+      font-family: var(--font-label);
+      font-size: var(--label-size);
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      text-align: left;
+      padding: var(--space-sm) var(--space-md);
+      background: var(--surface-container);
+      border-bottom: var(--section-rule);
+      color: var(--on-surface);
+    }
+    table.grammar-table td {
+      padding: var(--space-sm) var(--space-md);
+      border-bottom: var(--card-border);
+      vertical-align: top;
+      font-variant-numeric: tabular-nums;
+    }
+    table.grammar-table tr:last-child td {
+      border-bottom: none;
+    }
+
+    /* Form Controls with Always-Visible Labels */
+    .control-group {
+      display: flex;
+      flex-direction: column;
+      gap: var(--space-xs);
+    }
+    .control-label {
+      font-family: var(--font-label);
+      font-size: var(--label-size);
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      color: var(--on-surface-variant);
+    }
+    .input-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: var(--space-sm);
+      align-items: end;
+    }
+    select.field-select, input.field-input {
+      font-family: var(--font-body);
+      font-size: 0.9375rem;
+      min-height: 44px;
+      padding: var(--space-xs) var(--space-md);
+      border: var(--control-border);
+      border-radius: var(--rounded);
+      background: var(--surface-container-low);
+      color: var(--on-surface);
+    }
+    select.field-select {
+      padding-right: var(--space-xl);
+    }
+
+    /* Interactive Drill Cards */
+    .drill-box {
+      background: var(--surface-container-low);
+      border: var(--card-border);
+      border-radius: var(--rounded-lg);
+      padding: var(--space-lg);
+      display: flex;
+      flex-direction: column;
+      gap: var(--space-md);
+    }
+    .drill-header {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      align-items: center;
+      gap: var(--space-sm);
+      border-bottom: var(--card-border);
+      padding-bottom: var(--space-sm);
+    }
+    .drill-item {
+      padding: var(--space-md);
+      background: var(--background);
+      border: var(--card-border);
+      border-radius: var(--rounded);
+      display: flex;
+      flex-direction: column;
+      gap: var(--space-sm);
+    }
+    .drill-prompt {
+      font-weight: 600;
+      color: var(--on-surface);
+    }
+    .drill-options {
+      display: flex;
+      flex-wrap: wrap;
+      gap: var(--space-xs);
+    }
+    .option-btn {
+      font-family: var(--font-body);
+      font-weight: 600;
+      font-size: 0.9rem;
+      min-height: 44px;
+      padding: var(--space-xs) var(--space-md);
+      border: var(--control-border);
+      border-radius: var(--rounded);
+      background: var(--surface-container-low);
+      color: var(--on-surface);
+      cursor: pointer;
+      transition: background-color var(--dur-micro) var(--ease-out), border-color var(--dur-micro) var(--ease-out);
+    }
+    .option-btn:hover:not(:disabled) {
+      background: var(--surface-container-high);
+    }
+    .option-btn.selected-correct {
+      background: var(--positive-bg);
+      color: var(--positive);
+      border-color: var(--positive);
+    }
+    .option-btn.selected-wrong {
+      background: var(--error-bg);
+      color: var(--error);
+      border-color: var(--error);
+    }
+    .drill-feedback {
+      font-size: 0.9rem;
+      padding: var(--space-sm) var(--space-md);
+      border-radius: var(--rounded);
+      display: none;
+    }
+    .drill-feedback.visible {
+      display: block;
+    }
+    .drill-feedback.ok {
+      background: var(--positive-bg);
+      color: var(--positive);
+      border-left: 3px solid var(--positive);
+    }
+    .drill-feedback.err {
+      background: var(--error-bg);
+      color: var(--error);
+      border-left: 3px solid var(--error);
+    }
+
+    /* Separable Verb Lab */
+    .sentence-stage {
+      background: var(--background);
+      border: var(--card-border);
+      border-radius: var(--rounded);
+      padding: var(--space-lg);
+      font-size: clamp(1.125rem, 1rem + 0.6vw, 1.375rem);
+      font-weight: 600;
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      gap: var(--space-xs);
+      line-height: 1.5;
+    }
+    .slot-pill {
+      padding: var(--space-xs) var(--space-sm);
+      border-radius: var(--badge-radius);
+      border: var(--card-border);
+      background: var(--surface-container-low);
+    }
+    .slot-verb {
+      background: var(--case-akk-bg);
+      color: var(--case-akk);
+      border-color: var(--case-akk);
+    }
+    .slot-prefix {
+      background: var(--primary-container);
+      color: var(--on-primary-container);
+      border-color: var(--outline);
+    }
+
+    /* Preposition Grid Chips */
+    .prep-chip-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(min(130px, 100%), 1fr));
+      gap: var(--space-xs);
+    }
+    .prep-chip {
+      background: var(--background);
+      border: var(--card-border);
+      border-radius: var(--rounded);
+      padding: var(--space-sm);
+      display: flex;
+      flex-direction: column;
+      gap: 2px;
+    }
+    .prep-word {
+      font-weight: 700;
+      font-size: 1rem;
+    }
+    .prep-gloss {
+      font-size: 0.8125rem;
+      color: var(--on-surface-variant);
+    }
+
+    /* Spatial SVG Lab */
+    .svg-stage {
+      background: var(--background);
+      border: var(--card-border);
+      border-radius: var(--rounded);
+      padding: var(--space-md);
+      min-height: 240px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: var(--space-sm);
+    }
+    .svg-stage svg {
+      width: 100%;
+      max-width: 440px;
+      height: auto;
+      display: block;
+    }
+
+    /* Interactive Street Map */
+    .map-container {
+      background: var(--surface-container-low);
+      border: var(--card-border);
+      border-radius: var(--rounded-lg);
+      padding: var(--space-md);
+      display: flex;
+      flex-direction: column;
+      gap: var(--space-md);
+    }
+    .map-svg-wrap {
+      background: var(--background);
+      border: var(--card-border);
+      border-radius: var(--rounded);
+      padding: var(--space-sm);
+      min-height: 320px;
+      overflow-x: auto;
+    }
+    .map-svg-wrap svg {
+      width: 100%;
+      min-width: 520px;
+      height: auto;
+      display: block;
+    }
+    .route-steps {
+      display: flex;
+      flex-direction: column;
+      gap: var(--space-xs);
+    }
+    .route-step {
+      padding: var(--space-sm) var(--space-md);
+      border: var(--card-border);
+      border-radius: var(--rounded);
+      background: var(--background);
+      cursor: pointer;
+      display: flex;
+      align-items: flex-start;
+      gap: var(--space-sm);
+      text-align: left;
+      font-family: var(--font-body);
+      font-size: 0.9375rem;
+      color: var(--on-surface);
+      min-height: 44px;
+    }
+    .route-step.active-step {
+      background: var(--tertiary-container);
+      border-color: var(--outline);
+    }
+
+    /* Flashcards */
+    .flashcard-stage {
+      perspective: 1000px;
+    }
+    .flashcard {
+      background: var(--surface-container-low);
+      border: 1.5px solid var(--outline);
+      border-radius: var(--rounded-lg);
+      padding: var(--space-xl);
+      min-height: 230px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      gap: var(--space-md);
+      cursor: pointer;
+      transition: background-color var(--dur-short) var(--ease-out);
+    }
+    .flashcard:hover {
+      background: var(--background);
+    }
+    .flashcard.flipped {
+      background: var(--surface-container);
+    }
+    .flashcard-front-q {
+      font-family: var(--font-headline);
+      font-size: clamp(1.25rem, 1.1rem + 0.8vw, 1.625rem);
+      font-weight: 600;
+      line-height: 1.3;
+    }
+    .flashcard-answer {
+      border-top: var(--card-border);
+      padding-top: var(--space-md);
+      display: flex;
+      flex-direction: column;
+      gap: var(--space-xs);
+    }
+
+    /* Mastery Bars for Quiz Breakdown */
+    .mastery-list {
+      display: flex;
+      flex-direction: column;
+      gap: var(--space-sm);
+    }
+    .mastery-row {
+      display: grid;
+      grid-template-columns: minmax(0, 180px) minmax(0, 1fr) auto;
+      gap: var(--space-sm);
+      align-items: center;
+      font-size: 0.875rem;
+    }
+    .mastery-track {
+      height: 12px;
+      background: var(--surface-container);
+      border-radius: var(--badge-radius);
+      overflow: hidden;
+      border: var(--card-border);
+    }
+    .mastery-fill {
+      height: 100%;
+      background: var(--data-1);
+      transition: width var(--dur-short) var(--ease-out);
+    }
+
+    /* Footer */
+    footer.dossier-footer {
+      border-top: var(--section-rule);
+      padding-top: var(--space-lg);
+      padding-bottom: var(--space-xl);
+      color: var(--on-surface-variant);
+      font-size: 0.875rem;
+      display: flex;
+      flex-direction: column;
+      gap: var(--space-xs);
+    }
+
+    /* Responsive adjustments */
+    @media (max-width: 820px) {
+      .split-grid {
+        grid-template-columns: minmax(0, 1fr);
+      }
+    }
+    @media (max-width: 640px) {
+      .page-grid {
+        padding: var(--space-md);
+        gap: var(--space-lg);
+      }
+      .drill-box, .figure-card, .flashcard {
+        padding: var(--space-md);
+      }
+      .mastery-row {
+        grid-template-columns: minmax(0, 1fr) auto;
+      }
+      .mastery-track {
+        grid-column: 1 / -1;
+      }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      *, *::before, *::after {
+        animation-duration: 0.01ms !important;
+        transition-duration: 0.01ms !important;
+        scroll-behavior: auto !important;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="page-grid">
+
+    <!-- MASTHEAD -->
+    <header>
+      <div class="dossier-bar">
+        <div class="dossier-bar-left">
+          <span class="dossier-pill">Midterm Study Hub</span>
+          <span class="dossier-meta">Deutsch 2B &amp; 3 · Complete Exam Reference &amp; Drills</span>
+        </div>
+        <span class="dossier-meta">6 Core Units · 24 Flashcards · 20-Item Exam</span>
+      </div>
+
+      <h1 class="title">German Grammar Midterm Study Hub</h1>
+      <p class="standfirst">
+        Every rule, transformation table, contraction trap, and interactive drill required for your Deutsch 3 midterm—color-coded by grammatical case so you can spot Nominativ, Akkusativ, and Dativ in seconds.
+      </p>
+
+      <!-- Case Color Legend -->
+      <div class="case-legend-grid" aria-label="Color-coded grammatical case system">
+        <div class="case-legend-item">
+          <span class="case-badge case-nom">Nominativ · Subject</span>
+          <span class="kpi-sub">Who or what performs the action (<em>Wer? Was?</em>). Base dictionary articles: <strong>der / die / das</strong>.</span>
+        </div>
+        <div class="case-legend-item">
+          <span class="case-badge case-akk">Akkusativ · Motion / Object</span>
+          <span class="kpi-sub">Direct object, <em>es gibt</em>, 7 fixed preps, or <strong>Wohin?</strong> (movement A&rarr;B). Only masc. shifts: <strong>der &rarr; den</strong>.</span>
+        </div>
+        <div class="case-legend-item">
+          <span class="case-badge case-dat">Dativ · Static / Indirect</span>
+          <span class="kpi-sub">9 fixed preps, <em>zu/bei/vorbei</em>, or <strong>Wo?</strong> (no movement A&rarr;B). Shifts all genders + adds <strong>-n</strong> in plural.</span>
+        </div>
+        <div class="case-legend-item">
+          <span class="case-badge case-wechsel">Wechsel · Two-Way Rule</span>
+          <span class="kpi-sub">9 spatial preps (<em>in, auf, an, unter, über, vor, hinter, neben, zwischen</em>): <strong>Wo?</strong> &rarr; Dativ · <strong>Wohin?</strong> &rarr; Akkusativ.</span>
+        </div>
+      </div>
+
+      <!-- Progress KPI Strip -->
+      <div class="kpi-grid" aria-label="Study progress metrics">
+        <div class="figure-card">
+          <span class="kpi-label">Midterm Syllabus</span>
+          <span class="value">06 Units</span>
+          <span class="kpi-sub">Verbs, Cases, Preps, Spatial, Directions, Perfekt</span>
+        </div>
+        <div class="figure-card">
+          <span class="kpi-label">Practice Drills Solved</span>
+          <span class="value" id="kpi-drills">0 / 27</span>
+          <span class="kpi-sub" id="kpi-drills-sub">Try inline drills in each section</span>
+        </div>
+        <div class="figure-card">
+          <span class="kpi-label">Flashcards Mastered</span>
+          <span class="value" id="kpi-cards">0 / 24</span>
+          <span class="kpi-sub" id="kpi-cards-sub">Mark cards as mastered below</span>
+        </div>
+        <div class="figure-card">
+          <span class="kpi-label">Simulated Midterm</span>
+          <span class="value" id="kpi-quiz">—</span>
+          <span class="kpi-sub" id="kpi-quiz-sub">20-question exam not started</span>
+        </div>
+      </div>
+    </header>
+
+    <!-- TOPIC JUMP NAVIGATION -->
+    <nav class="topic-nav" aria-label="Jump to grammar topic">
+      <div class="topic-nav-links">
+        <a class="nav-jump" href="#cases"><span class="num">01</span> Articles &amp; Cases</a>
+        <a class="nav-jump" href="#separable"><span class="num">02</span> Separable Verbs</a>
+        <a class="nav-jump" href="#prepositions"><span class="num">03</span> Akkusativ vs. Dativ</a>
+        <a class="nav-jump" href="#wechsel"><span class="num">04</span> Wo vs. Wohin &amp; Verbs</a>
+        <a class="nav-jump" href="#directions"><span class="num">05</span> Wegbeschreibung</a>
+        <a class="nav-jump" href="#perfekt"><span class="num">06</span> Perfekt</a>
+        <a class="nav-jump" href="#flashcards"><span class="num">07</span> Flashcards</a>
+        <a class="nav-jump" href="#quiz"><span class="num">08</span> Midterm Quiz</a>
+      </div>
+      <button type="button" class="btn btn-secondary" id="reset-progress-btn" onclick="handleResetProgress(this)">Reset Progress</button>
+    </nav>
+
+    <!-- SECTION 01: ARTICLE TRANSFORMATION TABLES -->
+    <section class="study-section" id="cases">
+      <div class="dossier-bar">
+        <div class="dossier-bar-left">
+          <span class="index-num">01</span>
+          <span class="dossier-meta">Foundation · Article &amp; Pronoun Transformations</span>
+        </div>
+        <span class="case-badge case-nom">Master Table</span>
+      </div>
+
+      <h2 class="section-title">Article Transformation Tables &amp; Contraction Rules</h2>
+      <p class="section-lead">
+        Before choosing a preposition ending, lock in how each gender shifts. In <span class="tok-akk">Akkusativ</span>, only masculine changes (<em>der &rarr; den</em>). In <span class="tok-dat">Dativ</span>, every gender changes (<em>der/das &rarr; dem</em>, <em>die &rarr; der</em>, plural <em>die &rarr; den + -n</em>).
+      </p>
+
+      <div class="pill-group" role="group" aria-label="Filter article table">
+        <button type="button" class="filter-pill active" data-art="definite" onclick="setArticleView('definite', this)">Definite (der / die / das)</button>
+        <button type="button" class="filter-pill" data-art="indefinite" onclick="setArticleView('indefinite', this)">Indefinite (ein / eine)</button>
+        <button type="button" class="filter-pill" data-art="negative" onclick="setArticleView('negative', this)">Negative (kein / keine)</button>
+        <button type="button" class="filter-pill" data-art="possessive" onclick="setArticleView('possessive', this)">Possessive (mein / dein / sein)</button>
+        <button type="button" class="filter-pill" data-art="question" onclick="setArticleView('question', this)">Pronouns (wer / wen / wem)</button>
+      </div>
+
+      <div class="split-grid">
+        <div class="table-wrap">
+          <table class="grammar-table" id="article-table">
+            <thead>
+              <tr>
+                <th>Case</th>
+                <th>Masculine (r)</th>
+                <th>Feminine (e)</th>
+                <th>Neuter (s)</th>
+                <th>Plural (Pl.)</th>
+              </tr>
+            </thead>
+            <tbody id="article-table-body"></tbody>
+          </table>
+        </div>
+
+        <div class="figure-card">
+          <span class="aside-title">Interactive Noun Transformer</span>
+          <p class="kpi-sub">Select a noun from your course notes to inspect its exact form in all three cases.</p>
+          <div class="control-group" style="margin-top: var(--space-sm);">
+            <label class="control-label" for="noun-select">Choose Noun &amp; Gender</label>
+            <select class="field-select" id="noun-select" onchange="updateNounTransformer()">
+              <option value="0">der Bahnhof (Masculine · train station)</option>
+              <option value="1">die Post (Feminine · post office)</option>
+              <option value="2">das Stadion (Neuter · stadium)</option>
+              <option value="3">der Teppich (Masculine · carpet)</option>
+              <option value="4">die Kirche (Feminine · church)</option>
+              <option value="5">das Buch (Neuter · book)</option>
+              <option value="6">die Kinder (Plural · children)</option>
+              <option value="7">die Männer (Plural · men)</option>
+            </select>
+          </div>
+          <div id="noun-transformer-output" style="display: flex; flex-direction: column; gap: var(--space-xs); margin-top: var(--space-sm);"></div>
+        </div>
+      </div>
+
+      <!-- Critical Contractions & No Double Determiner Trap -->
+      <div class="two-col-grid">
+        <div class="aside-box">
+          <span class="aside-title">Essential Contractions (Preposition + Article)</span>
+          <p><strong>Dativ Contractions:</strong> <span class="tok-dat">zu + dem = zum</span> (masc./neut.: <em>zum Bahnhof, zum Stadion</em>) &middot; <span class="tok-dat">zu + der = zur</span> (fem.: <em>zur Post, zur Bank</em>) &middot; <span class="tok-dat">bei + dem = beim</span> (<em>beim Arzt</em>) &middot; <span class="tok-dat">von + dem = vom</span> &middot; <span class="tok-dat">in + dem = im</span> &middot; <span class="tok-dat">an + dem = am</span>.</p>
+          <p><strong>Akkusativ Contractions:</strong> <span class="tok-akk">in + das = ins</span> (<em>ins Kino, ins Regal</em>) &middot; <span class="tok-akk">auf + das = aufs</span> (<em>aufs Dach</em>) &middot; <span class="tok-akk">an + das = ans</span> (<em>ans Fenster</em>) &middot; <span class="tok-akk">vor + das = vors</span>.</p>
+        </div>
+        <div class="aside-box">
+          <span class="aside-title">Two High-Frequency Exam Traps</span>
+          <p><strong>1. Gender Mismatch on Directions:</strong> Never say <em>"zum Post"</em>! Because <em>Post</em> is feminine (<em>die Post</em>), Dativ transforms <em>die &rarr; der</em>, so <span class="tok-dat">zu + der = zur Post</span>.</p>
+          <p><strong>2. Article OR Possessive—Never Both:</strong> From your Deutsch 3 notes: say <em>"zu meiner Frau"</em> or <em>"zu der Frau (zur Frau)"</em>, never <em>"zu der meiner Frau"</em>.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 02: SEPARABLE VERBS -->
+    <section class="study-section" id="separable">
+      <div class="dossier-bar">
+        <div class="dossier-bar-left">
+          <span class="index-num">02</span>
+          <span class="dossier-meta">Unit 1 · Lektion 4 &amp; Workbook p. 66/17</span>
+        </div>
+        <span class="case-badge case-akk">Verb Bracket</span>
+      </div>
+
+      <h2 class="section-title">Separable Verbs (Trennbare Verben)</h2>
+      <p class="section-lead">
+        Separable prefixes carry the primary stress and split off to the <strong>end of the clause</strong> in a simple present sentence. When paired with a modal verb (<em>müssen, sollen, können, wollen, möchten, dürfen</em>), the modal takes Position 2 and the separable verb stays <strong>glued together as an infinitive</strong> at the end.
+      </p>
+
+      <div class="split-grid">
+        <!-- Interactive Sentence Splitter Lab -->
+        <div class="drill-box">
+          <div class="drill-header">
+            <span class="aside-title">Interactive Prefix Splitter &amp; Modal Toggle</span>
+            <span class="dossier-meta">Click to watch the prefix snap</span>
+          </div>
+
+          <div class="input-row">
+            <div class="control-group" style="flex: 1 1 240px;">
+              <label class="control-label" for="sep-verb-select">Select Course Verb</label>
+              <select class="field-select" id="sep-verb-select" onchange="updateSepLab()">
+                <option value="0">ausmachen (turn off · light/PC)</option>
+                <option value="1">anmachen (turn on · light)</option>
+                <option value="2">einschalten (switch on · radio/PC)</option>
+                <option value="3">ausschalten (switch off · TV)</option>
+                <option value="4">aufmachen (open · window/door)</option>
+                <option value="5">zumachen (close · fridge/book)</option>
+                <option value="6">anrufen (call on the phone)</option>
+                <option value="7">einkaufen (shop for groceries)</option>
+                <option value="8">aufstehen (get up · morning)</option>
+                <option value="9">vorbereiten (prepare · week/lecture)</option>
+              </select>
+            </div>
+            <div class="control-group">
+              <span class="control-label">Sentence Structure</span>
+              <div class="pill-group" style="margin-bottom: 0;">
+                <button type="button" class="filter-pill active" id="sep-mode-simple" onclick="setSepMode('simple')">Simple Present (Splits)</button>
+                <button type="button" class="filter-pill" id="sep-mode-modal" onclick="setSepMode('modal')">With Modal (Attached)</button>
+              </div>
+            </div>
+          </div>
+
+          <div class="sentence-stage" id="sep-sentence-stage" aria-live="polite"></div>
+          <p class="kpi-sub" id="sep-translation"></p>
+        </div>
+
+        <!-- Core Pairs Reference -->
+        <div class="figure-card">
+          <span class="aside-title">Opposites &amp; Core Midterm List</span>
+          <div class="table-wrap" style="margin-top: var(--space-xs);">
+            <table class="grammar-table">
+              <thead>
+                <tr>
+                  <th>Action A</th>
+                  <th>Opposite B</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td><strong>anmachen</strong> (turn on)</td>
+                  <td><strong>ausmachen</strong> (turn off)</td>
+                </tr>
+                <tr>
+                  <td><strong>einschalten</strong> (switch on)</td>
+                  <td><strong>ausschalten</strong> (switch off)</td>
+                </tr>
+                <tr>
+                  <td><strong>aufmachen</strong> (open)</td>
+                  <td><strong>zumachen</strong> (close)</td>
+                </tr>
+                <tr>
+                  <td><strong>einsteigen</strong> (get on)</td>
+                  <td><strong>aussteigen</strong> (get off)</td>
+                </tr>
+                <tr>
+                  <td><strong>aufwachen</strong> (wake up)</td>
+                  <td><strong>aufstehen</strong> (get up)</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <p class="kpi-sub" style="margin-top: var(--space-sm);">
+            <strong>Also on the syllabus:</strong> <em>einladen</em> (invite), <em>anrufen</em> (call), <em>einkaufen</em> (shop), <em>wegwerfen</em> (throw away), <em>aussehen</em> (look/appear), <em>abfahren</em> (depart), <em>fernsehen</em> (watch TV), <em>mitbringen</em> (bring along), <em>kennenlernen</em> (get to know), <em>vorbereiten</em> (prepare).
+          </p>
+        </div>
+      </div>
+
+      <!-- Inline Practice Drill: Separable Verbs -->
+      <div class="drill-box">
+        <div class="drill-header">
+          <span class="aside-title">Quick Drill · Separable Verbs (5 Items)</span>
+          <span class="dossier-meta" id="drill-sep-score">0 / 5 answered</span>
+        </div>
+        <div id="drill-sep-container" class="two-col-grid"></div>
+      </div>
+    </section>
+
+    <!-- SECTION 03: AKKUSATIV VS. DATIV PREPOSITIONS -->
+    <section class="study-section" id="prepositions">
+      <div class="dossier-bar">
+        <div class="dossier-bar-left">
+          <span class="index-num">03</span>
+          <span class="dossier-meta">Units 3a &amp; 3b · Fixed-Case Prepositions</span>
+        </div>
+        <div style="display: flex; gap: var(--space-xs);">
+          <span class="case-badge case-akk">7 Akkusativ</span>
+          <span class="case-badge case-dat">9 Dativ</span>
+        </div>
+      </div>
+
+      <h2 class="section-title">Akkusativ vs. Dativ Prepositions</h2>
+      <p class="section-lead">
+        Unlike two-way prepositions, these 16 prepositions <strong>never change their case</strong>. Memorize the two fixed lists first—if you spot one of these words, the case of the following noun or pronoun is 100% locked.
+      </p>
+
+      <div class="two-col-grid">
+        <!-- Akkusativ Only Card -->
+        <div class="figure-card" style="border-top: 4px solid var(--case-akk);">
+          <div style="display: flex; justify-content: space-between; align-items: center;">
+            <span class="case-badge case-akk">Akkusativ Only (7)</span>
+            <span class="dossier-meta">der &rarr; den</span>
+          </div>
+          <div class="prep-chip-grid" style="margin-top: var(--space-sm);">
+            <div class="prep-chip"><span class="prep-word">durch</span><span class="prep-gloss">through</span></div>
+            <div class="prep-chip"><span class="prep-word">für</span><span class="prep-gloss">for</span></div>
+            <div class="prep-chip"><span class="prep-word">ohne</span><span class="prep-gloss">without</span></div>
+            <div class="prep-chip"><span class="prep-word">gegen</span><span class="prep-gloss">against / ~time</span></div>
+            <div class="prep-chip"><span class="prep-word">um</span><span class="prep-gloss">around / at time</span></div>
+            <div class="prep-chip"><span class="prep-word">bis</span><span class="prep-gloss">until / up to</span></div>
+            <div class="prep-chip"><span class="prep-word">entlang</span><span class="prep-gloss">along (postpos.)</span></div>
+          </div>
+          <div class="aside-box" style="margin-top: var(--space-sm);">
+            <span class="aside-title">Course Rules &amp; Examples</span>
+            <p><strong>Postposition Alert:</strong> <em>entlang</em> stands <strong>after</strong> the noun: <em>"Ich laufe <span class="tok-akk">die Donau</span> entlang."</em> / <em>"Ich gehe <span class="tok-akk">den Fluss</span> entlang."</em></p>
+            <p><strong>Time &amp; Circumference:</strong> <em>"Er reitet durch <span class="tok-akk">den kleinen Wald</span>."</em> &middot; <em>"Die Party beginnt gegen 4 Uhr / um 4 Uhr herum."</em> &middot; <em>"Ohne <span class="tok-akk">meinen Freund</span>."</em></p>
+          </div>
+        </div>
+
+        <!-- Dativ Only Card -->
+        <div class="figure-card" style="border-top: 4px solid var(--case-dat);">
+          <div style="display: flex; justify-content: space-between; align-items: center;">
+            <span class="case-badge case-dat">Dativ Only (9)</span>
+            <span class="dossier-meta">dem / der / den + -n</span>
+          </div>
+          <div class="prep-chip-grid" style="margin-top: var(--space-sm);">
+            <div class="prep-chip"><span class="prep-word">aus</span><span class="prep-gloss">from / out of</span></div>
+            <div class="prep-chip"><span class="prep-word">bei</span><span class="prep-gloss">at / with (static)</span></div>
+            <div class="prep-chip"><span class="prep-word">mit</span><span class="prep-gloss">with / by</span></div>
+            <div class="prep-chip"><span class="prep-word">nach</span><span class="prep-gloss">after / to (city)</span></div>
+            <div class="prep-chip"><span class="prep-word">von</span><span class="prep-gloss">from / of</span></div>
+            <div class="prep-chip"><span class="prep-word">zu</span><span class="prep-gloss">to (A&rarr;B)</span></div>
+            <div class="prep-chip"><span class="prep-word">gegenüber</span><span class="prep-gloss">opposite</span></div>
+            <div class="prep-chip"><span class="prep-word">seit</span><span class="prep-gloss">since / for (past)</span></div>
+            <div class="prep-chip"><span class="prep-word">ab</span><span class="prep-gloss">starting (future)</span></div>
+          </div>
+          <div class="aside-box" style="margin-top: var(--space-sm);">
+            <span class="aside-title">High-Yield Dativ Distinctions</span>
+            <p><strong>zu (A&rarr;B) vs. bei (Static):</strong> <em>"Ich gehe <span class="tok-dat">zu Peter / zum Arzt / zur Ärztin</span>."</em> vs. <em>"Ich bin <span class="tok-dat">bei Peter / beim Arzt / bei der Ärztin</span>."</em></p>
+            <p><strong>seit (Past&rarr;Now + Present) vs. ab (Future):</strong> <em>"Ich lebe <span class="tok-dat">seit 2015 / seit 11 Jahren</span> in Wien."</em> vs. <em>"Ich bin <span class="tok-dat">ab Freitag</span> auf Urlaub."</em></p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Contrast Q&A Reference Table from Deutsch 3_151026/201026 -->
+      <div class="table-wrap">
+        <table class="grammar-table">
+          <thead>
+            <tr>
+              <th>Question Word</th>
+              <th>Preposition</th>
+              <th>Course Example (Dativ / Akkusativ)</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><strong>Wohin?</strong> (city / country / home)</td>
+              <td><span class="tok-dat">nach</span></td>
+              <td>Morgen fliege ich <strong>nach Südamerika / nach Brasilien / nach Hause</strong>.</td>
+            </tr>
+            <tr>
+              <td><strong>Wohin?</strong> (shop / person)</td>
+              <td><span class="tok-dat">zu (zum/zur)</span></td>
+              <td>Ich gehe heute <span class="tok-dat">zum Billa / zum Arzt / zur Ärztin / zu meinen Eltern</span>.</td>
+            </tr>
+            <tr>
+              <td><strong>Wo?</strong> (shop / person)</td>
+              <td><span class="tok-dat">bei (beim)</span></td>
+              <td>Ich bin jetzt <span class="tok-dat">beim Hofer / beim Arzt / bei meinem Freund</span>.</td>
+            </tr>
+            <tr>
+              <td><strong>Woher?</strong> (building vs. person)</td>
+              <td><span class="tok-dat">aus</span> / <span class="tok-dat">von</span></td>
+              <td>Ich komme <span class="tok-dat">aus dem Supermarkt</span>. / Ich komme <span class="tok-dat">von meinen Eltern</span>.</td>
+            </tr>
+            <tr>
+              <td><strong>Seit wann?</strong> (+ Präsens!)</td>
+              <td><span class="tok-dat">seit</span></td>
+              <td>Ich bin <span class="tok-dat">seit zwei Jahren</span> in Wien. (Action started in past, still ongoing!)</td>
+            </tr>
+            <tr>
+              <td><strong>Wo?</strong> (across the street)</td>
+              <td><span class="tok-dat">gegenüber</span></td>
+              <td>Die Bank ist <span class="tok-dat">gegenüber dem Supermarkt / gegenüber der Post</span>.</td>
+            </tr>
+            <tr>
+              <td><strong>Für wen? / Gegen was?</strong></td>
+              <td><span class="tok-akk">für / gegen</span></td>
+              <td>Das Geschenk ist <span class="tok-akk">für meinen Vater</span>. / Sie protestieren <span class="tok-akk">gegen den Politiker</span>.</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <!-- Inline Practice Drill: Prepositions -->
+      <div class="drill-box">
+        <div class="drill-header">
+          <span class="aside-title">Quick Drill · Akkusativ vs. Dativ Prepositions (6 Items)</span>
+          <span class="dossier-meta" id="drill-prep-score">0 / 6 answered</span>
+        </div>
+        <div id="drill-prep-container" class="two-col-grid"></div>
+      </div>
+    </section>
+
+    <!-- SECTION 04: WECHSELPRÄPOSITIONEN & POSITIONAL VERBS -->
+    <section class="study-section" id="wechsel">
+      <div class="dossier-bar">
+        <div class="dossier-bar-left">
+          <span class="index-num">04</span>
+          <span class="dossier-meta">Units 3c &amp; 3d · Spatial Prepositions &amp; Dominik's Room</span>
+        </div>
+        <span class="case-badge case-wechsel">Wo? vs. Wohin?</span>
+      </div>
+
+      <h2 class="section-title">Wechselpräpositionen &amp; Positional Verb Pairs</h2>
+      <p class="section-lead">
+        Nine two-way prepositions (<em>an, auf, hinter, in, neben, über, unter, vor, zwischen</em>) take <span class="tok-dat">Dativ</span> when describing a static position (<strong>Wo?</strong> — no movement from A to B) and <span class="tok-akk">Akkusativ</span> when describing directional placement (<strong>Wohin?</strong> — movement from A to B).
+      </p>
+
+      <!-- Interactive Wo vs Wohin Lab -->
+      <div class="split-grid">
+        <div class="drill-box">
+          <div class="drill-header">
+            <span class="aside-title">Interactive Positional Verb Pair Lab</span>
+            <span class="dossier-meta">Compare Static vs. Action</span>
+          </div>
+
+          <div class="pill-group" role="group" aria-label="Select positional verb pair">
+            <button type="button" class="filter-pill active" onclick="setSpatialPair(0, this)">liegen / legen</button>
+            <button type="button" class="filter-pill" onclick="setSpatialPair(1, this)">stehen / stellen</button>
+            <button type="button" class="filter-pill" onclick="setSpatialPair(2, this)">sitzen / setzen</button>
+            <button type="button" class="filter-pill" onclick="setSpatialPair(3, this)">hängen / hängen</button>
+            <button type="button" class="filter-pill" onclick="setSpatialPair(4, this)">sein (static)</button>
+          </div>
+
+          <div class="pill-group" role="group" aria-label="Toggle Wo vs Wohin">
+            <button type="button" class="filter-pill active" id="spatial-btn-wo" onclick="setSpatialMode('wo')">Wo? (Static &rarr; Dativ)</button>
+            <button type="button" class="filter-pill" id="spatial-btn-wohin" onclick="setSpatialMode('wohin')">Wohin? (Movement A&rarr;B &rarr; Akkusativ)</button>
+          </div>
+
+          <div class="svg-stage" id="spatial-svg-stage"></div>
+          <div id="spatial-sentence-readout" style="display: flex; flex-direction: column; gap: var(--space-xs);"></div>
+        </div>
+
+        <!-- Complete Positional Verbs Table -->
+        <div class="figure-card">
+          <span class="aside-title">Positional Verb Pairs (Unit 3d)</span>
+          <div class="table-wrap" style="margin-top: var(--space-xs);">
+            <table class="grammar-table">
+              <thead>
+                <tr>
+                  <th><span class="tok-dat">Wo? + Dativ</span> (Static)</th>
+                  <th><span class="tok-akk">Wohin? + Akk.</span> (Action A&rarr;B)</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td><strong>liegen</strong> (to lie flat)<br><em>auf <span class="tok-dat">dem</span> Teppich</em></td>
+                  <td><strong>legen</strong> (to lay flat)<br><em>auf <span class="tok-akk">den</span> Teppich</em></td>
+                </tr>
+                <tr>
+                  <td><strong>stehen</strong> (to stand upright)<br><em>auf <span class="tok-dat">dem</span> Polster</em></td>
+                  <td><strong>stellen</strong> (to put upright)<br><em>auf <span class="tok-akk">den</span> Polster</em></td>
+                </tr>
+                <tr>
+                  <td><strong>sitzen</strong> (to be seated)<br><em>zwischen <span class="tok-dat">dem</span> Tisch und <span class="tok-dat">dem</span> Schrank</em></td>
+                  <td><strong>setzen</strong> (to seat / set down)<br><em>zwischen <span class="tok-akk">den</span> Tisch und <span class="tok-akk">den</span> Schrank</em></td>
+                </tr>
+                <tr>
+                  <td><strong>hängen</strong> (to be hanging)<br><em><span class="tok-dat">am</span> Schlüssel</em> (an + dem)</td>
+                  <td><strong>hängen</strong> (to hang up)<br><em>an <span class="tok-akk">den</span> Schlüssel</em></td>
+                </tr>
+                <tr>
+                  <td><strong>sein</strong> (to be located)<br><em>unter <span class="tok-dat">dem</span> Sessel</em></td>
+                  <td><em>(always static &rarr; Dativ)</em></td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+
+          <div class="aside-box" style="margin-top: var(--space-sm);">
+            <span class="aside-title">9 Two-Way Prepositions + Course Vocab</span>
+            <p><strong>in</strong> (in/into), <strong>auf</strong> (on horizontal), <strong>an</strong> (on vertical/at), <strong>unter</strong> (under), <strong>über</strong> (above), <strong>vor</strong> (in front of), <strong>hinter</strong> (behind), <strong>neben</strong> (next to), <strong>zwischen</strong> (between).</p>
+            <p><strong>Dominik Sheet Nouns:</strong> <em>r Teppich, r Sessel, r Tisch, r Schrank/Kasten, r Polster/s Kissen, e Wand, e Brille, r Schlüssel, e Tasche, s Bett</em>. Reflexive: <em>"Ich setze mich auf den Sessel." / "Ich stelle mich vor die Wand."</em></p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Inline Practice Drill: Wechselpräpositionen & Verb Pairs -->
+      <div class="drill-box">
+        <div class="drill-header">
+          <span class="aside-title">Quick Drill · Wo vs. Wohin &amp; Positional Verbs (6 Items)</span>
+          <span class="dossier-meta" id="drill-wechsel-score">0 / 6 answered</span>
+        </div>
+        <div id="drill-wechsel-container" class="two-col-grid"></div>
+      </div>
+    </section>
+
+    <!-- SECTION 05: WEGBESCHREIBUNG (DIRECTIONS) -->
+    <section class="study-section" id="directions">
+      <div class="dossier-bar">
+        <div class="dossier-bar-left">
+          <span class="index-num">05</span>
+          <span class="dossier-meta">Unit 4 · Skriptum &amp; Lehrbuch Seite 55</span>
+        </div>
+        <span class="case-badge case-dat">Applied Navigation</span>
+      </div>
+
+      <h2 class="section-title">Wegbeschreibung: Asking &amp; Giving Directions</h2>
+      <p class="section-lead">
+        German splits direction questions into two strict case frames: ask if something exists nearby with <span class="tok-akk">es gibt + Akkusativ</span>, or ask how to reach a specific destination with <span class="tok-dat">wie komme ich zu + Dativ (zum / zur)</span>.
+      </p>
+
+      <div class="two-col-grid">
+        <div class="figure-card">
+          <span class="aside-title">Formula 1 · Asking for Directions</span>
+          <p style="margin-top: var(--space-xs);"><strong>1) Existence (Indefinite + <span class="tok-akk">Akkusativ</span>):</strong><br>
+          <em>"Entschuldigung, gibt es hier in der Nähe <span class="tok-akk">einen</span> Bankautomat / <span class="tok-akk">eine</span> Apotheke / <span class="tok-akk">ein</span> Café?"</em></p>
+          <p style="margin-top: var(--space-sm);"><strong>2) Specific Target (<span class="tok-dat">zu + Dativ</span>):</strong><br>
+          <em>"Entschuldigung, wie komme ich <span class="tok-dat">zum</span> Bahnhof / <span class="tok-dat">zum</span> Stadion / <span class="tok-dat">zur</span> Post / <span class="tok-dat">zur</span> U-Bahn?"</em></p>
+          <p style="margin-top: var(--space-sm);"><strong>Polite Replies:</strong> <em>Keine Ursache! &middot; Gern geschehen! &middot; Kein Problem! &middot; Bitte, gerne!</em></p>
+        </div>
+
+        <div class="figure-card">
+          <span class="aside-title">Formula 2 · Direction Prepositions &amp; Ordinals</span>
+          <p style="margin-top: var(--space-xs);"><strong>Fixed Direction Phrases:</strong></p>
+          <ul style="margin: var(--space-xs) 0 0 var(--space-md); padding: 0;">
+            <li><span class="tok-dat">vorbeigehen an + Dativ</span>: <em>"Gehen Sie am Rathaus / an der Kirche vorbei."</em></li>
+            <li><span class="tok-dat">bis zu + Dativ</span>: <em>"Gehen Sie bis zur nächsten Kreuzung / Ampel."</em></li>
+            <li><span class="tok-dat">gegenüber + Dativ</span>: <em>"Der Supermarkt ist gegenüber der Post."</em></li>
+            <li><span class="tok-akk">über / durch + Akkusativ</span>: <em>"Gehen Sie über die Kreuzung / durch den Park."</em></li>
+            <li><strong>Ordinals (1–19 <em>-te</em>, 20+ <em>-ste</em>):</strong> <em>die <span class="tok-akk">erste</span> / <span class="tok-akk">zweite</span> / <span class="tok-akk">dritte</span> / vierte / siebte / zwanzigste Straße links nehmen</em>.</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Interactive Neighborhood Map & Route Walkthrough -->
+      <div class="map-container">
+        <div class="drill-header">
+          <div>
+            <span class="aside-title">Interactive Skriptum City Map &amp; Route Simulator</span>
+            <p class="kpi-sub">Choose a scenario from your Wegbeschreibung packet and click each step to trace the path.</p>
+          </div>
+          <div class="pill-group" style="margin-bottom: 0;">
+            <button type="button" class="filter-pill active" onclick="selectRoute(0, this)">Bahnhof &rarr; Stadion</button>
+            <button type="button" class="filter-pill" onclick="selectRoute(1, this)">Stadion &rarr; Café</button>
+            <button type="button" class="filter-pill" onclick="selectRoute(2, this)">Spielplatz &rarr; Apotheke</button>
+            <button type="button" class="filter-pill" onclick="selectRoute(3, this)">Police Quiz &rarr; Bank</button>
+          </div>
+        </div>
+
+        <div class="split-grid">
+          <div class="map-svg-wrap" id="direction-map-wrap"></div>
+          <div style="display: flex; flex-direction: column; gap: var(--space-sm);">
+            <div class="aside-box" id="route-question-box"></div>
+            <div class="route-steps" id="route-steps-list"></div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Public Transit Strip + Quick Drill -->
+      <div class="aside-box">
+        <span class="aside-title">Public Transit Vocabulary (mit + Dativ)</span>
+        <p><strong>Vehicles:</strong> <em>das Taxi</em> (mit dem Taxi) &middot; <em>der Bus</em> (mit dem Bus) &middot; <em>die Straßenbahn</em> (mit der Straßenbahn) &middot; <em>die U-Bahn</em> (mit der U-Bahn) &middot; <em>die S-Bahn</em> (mit der S-Bahn).</p>
+        <p><strong>Verbs:</strong> <em>einsteigen</em> (in die Linie 4) &middot; <em>aussteigen</em> (an der zweiten Haltestelle) &middot; <em>umsteigen</em> (am Bahnhof in den Bus) &middot; <em>bis zur Endhaltestelle fahren</em>.</p>
+      </div>
+
+      <div class="drill-box">
+        <div class="drill-header">
+          <span class="aside-title">Quick Drill · Wegbeschreibung &amp; Contractions (5 Items)</span>
+          <span class="dossier-meta" id="drill-dir-score">0 / 5 answered</span>
+        </div>
+        <div id="drill-dir-container" class="two-col-grid"></div>
+      </div>
+    </section>
+
+    <!-- SECTION 06: PERFEKT PAST TENSE -->
+    <section class="study-section" id="perfekt">
+      <div class="dossier-bar">
+        <div class="dossier-bar-left">
+          <span class="index-num">06</span>
+          <span class="dossier-meta">Conversational Past · Weak / Regular Verbs</span>
+        </div>
+        <span class="case-badge case-nom">haben + ge-...-t</span>
+      </div>
+
+      <h2 class="section-title">Perfekt Past Tense (Regular / Weak Verbs)</h2>
+      <p class="section-lead">
+        German uses three past tenses (<em>Perfekt, Präteritum, Plusquamperfekt</em>). For everyday speech, regular weak verbs form the <strong>Perfekt</strong> with conjugated <strong>haben</strong> in Position 2 and the <strong>Partizip II</strong> (<em>ge- + stem + -t</em>) at the very end of the sentence.
+      </p>
+
+      <div class="split-grid">
+        <!-- Interactive Partizip II Stem Builder -->
+        <div class="drill-box">
+          <div class="drill-header">
+            <span class="aside-title">Interactive Partizip II Builder</span>
+            <span class="dossier-meta">Check the -e- insertion rule</span>
+          </div>
+
+          <div class="control-group">
+            <label class="control-label" for="perfekt-verb-select">Select Regular Verb (Infinitiv)</label>
+            <select class="field-select" id="perfekt-verb-select" onchange="updatePerfektBuilder()">
+              <option value="0">duschen (to shower — standard stem)</option>
+              <option value="1">kaufen (to buy — standard stem)</option>
+              <option value="2">tanzen (to dance — standard stem)</option>
+              <option value="3">kochen (to cook — standard stem)</option>
+              <option value="4">spielen (to play — standard stem)</option>
+              <option value="5">antworten (to answer — stem ends in -t)</option>
+              <option value="6">arbeiten (to work — stem ends in -t)</option>
+              <option value="7">kosten (to cost — stem ends in -t)</option>
+              <option value="8">regnen (to rain — stem ends in -gn)</option>
+              <option value="9">rechnen (to calculate — stem ends in -chn)</option>
+              <option value="10">atmen (to breathe — stem ends in -tm)</option>
+              <option value="11">reden (to talk — stem ends in -d)</option>
+            </select>
+          </div>
+
+          <div class="sentence-stage" id="perfekt-builder-stage" aria-live="polite"></div>
+          <div id="perfekt-builder-note" class="aside-box"></div>
+        </div>
+
+        <!-- Grammar Rules & Conjugation Card -->
+        <div class="figure-card">
+          <span class="aside-title">Sentence Bracket &amp; The -et Rule</span>
+          <p style="margin-top: var(--space-xs);"><strong>Conjugation of <em>haben</em> (Position 2):</strong><br>
+          ich <strong>habe</strong> &middot; du <strong>hast</strong> &middot; er/sie/es <strong>hat</strong> &middot; wir <strong>haben</strong> &middot; ihr <strong>habt</strong> &middot; sie/Sie <strong>haben</strong></p>
+          <p style="margin-top: var(--space-sm);"><strong>Full Sentence Example (from Deutsch 3 notes):</strong><br>
+          <em>"Ich <span class="tok-akk">habe</span> gestern Nachmittag im Badezimmer fünf Minuten <span class="tok-verb">geduscht</span>."</em></p>
+          <div class="aside-box" style="margin-top: var(--space-sm);">
+            <span class="aside-title">When to Add -et Instead of -t</span>
+            <p>If the verb stem ends in <strong>-t, -d, -chn, -gn, or -tm</strong>, insert an <strong>-e-</strong> before the final <strong>-t</strong> so it stays pronounceable: <em>antwor<strong>t</strong>en &rarr; geantwor<strong>tet</strong>, arbei<strong>t</strong>en &rarr; gearbei<strong>tet</strong>, reg<strong>n</strong>en &rarr; gereg<strong>net</strong>, at<strong>m</strong>en &rarr; geat<strong>met</strong></em>.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Inline Practice Drill: Perfekt -->
+      <div class="drill-box">
+        <div class="drill-header">
+          <span class="aside-title">Quick Drill · Perfekt Worksheet Practice (5 Items)</span>
+          <span class="dossier-meta" id="drill-perf-score">0 / 5 answered</span>
+        </div>
+        <div id="drill-perf-container" class="two-col-grid"></div>
+      </div>
+    </section>
+
+    <!-- SECTION 07: ACTIVE RECALL FLASHCARDS -->
+    <section class="study-section" id="flashcards">
+      <div class="dossier-bar">
+        <div class="dossier-bar-left">
+          <span class="index-num">07</span>
+          <span class="dossier-meta">Active Recall · 24 Midterm Flashcards</span>
+        </div>
+        <span class="case-badge case-wechsel" id="fc-progress-badge">0 / 24 Mastered</span>
+      </div>
+
+      <h2 class="section-title">Interactive Midterm Flashcard Deck</h2>
+      <p class="section-lead">
+        Filter by topic, test yourself before flipping, and mark mastered cards to focus on weak spots. Your progress saves automatically.
+      </p>
+
+      <div class="pill-group" role="group" aria-label="Filter flashcards by topic">
+        <button type="button" class="filter-pill active" onclick="filterFlashcards('all', this)">All Topics (24)</button>
+        <button type="button" class="filter-pill" onclick="filterFlashcards('separable', this)">Separable Verbs</button>
+        <button type="button" class="filter-pill" onclick="filterFlashcards('preps', this)">Akk / Dat Preps</button>
+        <button type="button" class="filter-pill" onclick="filterFlashcards('wechsel', this)">Wo vs. Wohin</button>
+        <button type="button" class="filter-pill" onclick="filterFlashcards('directions', this)">Wegbeschreibung</button>
+        <button type="button" class="filter-pill" onclick="filterFlashcards('perfekt', this)">Perfekt</button>
+      </div>
+
+      <div class="flashcard-stage">
+        <div class="flashcard" id="flashcard-box" tabindex="0" role="button" aria-label="Flashcard — press to flip" onclick="flipFlashcard()" onkeydown="handleFlashcardKey(event)">
+          <div style="display: flex; justify-content: space-between; align-items: center; gap: var(--space-sm);">
+            <span class="case-badge case-akk" id="fc-topic-tag">Topic</span>
+            <span class="dossier-meta" id="fc-counter">Card 1 of 24</span>
+          </div>
+          <div class="flashcard-front-q" id="fc-front"></div>
+          <div class="flashcard-answer" id="fc-back" style="display: none;">
+            <div style="font-weight: 700; font-size: 1.15rem;" id="fc-answer-text"></div>
+            <div class="kpi-sub" id="fc-rule-note"></div>
+          </div>
+          <div style="display: flex; justify-content: space-between; align-items: center; gap: var(--space-sm);">
+            <span class="dossier-meta" id="fc-flip-hint">Click or press Space to reveal answer</span>
+            <span class="dossier-meta" id="fc-status-label"></span>
+          </div>
+        </div>
+      </div>
+
+      <div style="display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center; gap: var(--space-sm);">
+        <div style="display: flex; gap: var(--space-xs);">
+          <button type="button" class="btn btn-secondary" onclick="prevFlashcard()">Previous</button>
+          <button type="button" class="btn btn-primary" onclick="flipFlashcard()">Flip Card</button>
+          <button type="button" class="btn btn-secondary" onclick="nextFlashcard()">Next</button>
+        </div>
+        <div style="display: flex; gap: var(--space-xs);">
+          <button type="button" class="btn btn-secondary" onclick="markFlashcard(false)">Needs Review</button>
+          <button type="button" class="btn btn-gold" onclick="markFlashcard(true)">Mark Mastered</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 08: COMPREHENSIVE MIDTERM QUIZ -->
+    <section class="study-section" id="quiz">
+      <div class="dossier-bar">
+        <div class="dossier-bar-left">
+          <span class="index-num">08</span>
+          <span class="dossier-meta">Exam Simulation · 20 Midterm Questions</span>
+        </div>
+        <span class="case-badge case-dat" id="quiz-status-badge">0 / 20 Answered</span>
+      </div>
+
+      <h2 class="section-title">Comprehensive Midterm Practice Exam</h2>
+      <p class="section-lead">
+        20 exam-style questions built directly from your Teststoff checklist, Delfin dialogues, and course worksheets. Every answer includes a color-coded grammar explanation.
+      </p>
+
+      <div class="split-grid">
+        <div class="figure-card">
+          <span class="aside-title">Topic Mastery Breakdown</span>
+          <div class="mastery-list" id="quiz-mastery-list" style="margin-top: var(--space-sm);"></div>
+        </div>
+        <div class="figure-card">
+          <span class="aside-title">Exam Controls &amp; Filter</span>
+          <div class="pill-group" style="margin-top: var(--space-sm); margin-bottom: var(--space-sm);">
+            <button type="button" class="filter-pill active" onclick="filterQuiz('all', this)">All 20 Questions</button>
+            <button type="button" class="filter-pill" onclick="filterQuiz('missed', this)">Missed Only</button>
+          </div>
+          <div style="display: flex; flex-wrap: wrap; gap: var(--space-xs);">
+            <button type="button" class="btn btn-secondary" id="retake-quiz-btn" onclick="handleRetakeQuiz(this)">Retake Quiz</button>
+          </div>
+          <p class="kpi-sub" id="quiz-summary-text" style="margin-top: var(--space-sm);">Select an option on any question below to begin grading.</p>
+        </div>
+      </div>
+
+      <div id="quiz-questions-container" class="two-col-grid"></div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="dossier-footer">
+      <div><strong>Sources &amp; Course Alignment:</strong> Compiled from Deutsch 2B &amp; Deutsch 3 class notes (July–November 2026), Delfin Hörverstehen Lektion 1–10 transcripts, Wegbeschreibung Skriptum, Wechselpräpositionen (Dominik) &amp; Akkusativ/Dativ worksheets, and Perfekt schwache Verben exercises.</div>
+      <div>All progress, solved drills, mastered flashcards, and quiz scores persist automatically within your notebook session.</div>
+    </footer>
+  </div>
+
+  <api-shim></api-shim>
+  <script>
+    /* ============================================================
+       1. DATA DEFINITIONS (Backtick literals throughout)
+       ============================================================ */
+    const ARTICLE_VIEWS = {
+      definite: [
+        { kase: `Nominativ`, cls: `case-nom`, m: `der`, f: `die`, n: `das`, p: `die` },
+        { kase: `Akkusativ`, cls: `case-akk`, m: `den`, f: `die`, n: `das`, p: `die` },
+        { kase: `Dativ`, cls: `case-dat`, m: `dem`, f: `der`, n: `dem`, p: `den (+ -n)` }
+      ],
+      indefinite: [
+        { kase: `Nominativ`, cls: `case-nom`, m: `ein`, f: `eine`, n: `ein`, p: `—` },
+        { kase: `Akkusativ`, cls: `case-akk`, m: `einen`, f: `eine`, n: `ein`, p: `—` },
+        { kase: `Dativ`, cls: `case-dat`, m: `einem`, f: `einer`, n: `einem`, p: `—` }
+      ],
+      negative: [
+        { kase: `Nominativ`, cls: `case-nom`, m: `kein`, f: `keine`, n: `kein`, p: `keine` },
+        { kase: `Akkusativ`, cls: `case-akk`, m: `keinen`, f: `keine`, n: `kein`, p: `keine` },
+        { kase: `Dativ`, cls: `case-dat`, m: `keinem`, f: `keiner`, n: `keinem`, p: `keinen (+ -n)` }
+      ],
+      possessive: [
+        { kase: `Nominativ`, cls: `case-nom`, m: `mein`, f: `meine`, n: `mein`, p: `meine` },
+        { kase: `Akkusativ`, cls: `case-akk`, m: `meinen`, f: `meine`, n: `mein`, p: `meine` },
+        { kase: `Dativ`, cls: `case-dat`, m: `meinem`, f: `meiner`, n: `meinem`, p: `meinen (+ -n)` }
+      ],
+      question: [
+        { kase: `Nominativ`, cls: `case-nom`, m: `wer`, f: `wer`, n: `was`, p: `wer` },
+        { kase: `Akkusativ`, cls: `case-akk`, m: `wen`, f: `wen`, n: `was`, p: `wen` },
+        { kase: `Dativ`, cls: `case-dat`, m: `wem`, f: `wem`, n: `wem`, p: `wem` }
+      ]
+    };
+
+    const NOUN_SAMPLES = [
+      {
+        nom: `der Bahnhof`,
+        akk: `den Bahnhof (durch den Bahnhof)`,
+        dat: `dem Bahnhof (zum Bahnhof · am Bahnhof vorbei)`,
+        note: `Masculine: der shifts in both Akkusativ (den) and Dativ (dem).`
+      },
+      {
+        nom: `die Post`,
+        akk: `die Post (für die Post)`,
+        dat: `der Post (zur Post · gegenüber der Post)`,
+        note: `Feminine: die stays die in Akkusativ, shifts to der in Dativ (zu + der = zur).`
+      },
+      {
+        nom: `das Stadion`,
+        akk: `das Stadion (in das / ins Stadion)`,
+        dat: `dem Stadion (zum Stadion · im Stadion)`,
+        note: `Neuter: das stays das in Akkusativ, shifts to dem in Dativ (zu + dem = zum).`
+      },
+      {
+        nom: `der Teppich`,
+        akk: `den Teppich (legt das Hemd auf den Teppich)`,
+        dat: `dem Teppich (liegt auf dem Teppich)`,
+        note: `Masculine: Wohin? (legen) takes den; Wo? (liegen) takes dem.`
+      },
+      {
+        nom: `die Kirche`,
+        akk: `die Kirche (sieht die Kirche)`,
+        dat: `der Kirche (geht an der Kirche vorbei)`,
+        note: `Feminine: vorbeigehen an + Dativ turns die Kirche into an der Kirche.`
+      },
+      {
+        nom: `das Buch`,
+        akk: `das Buch (legt das Buch auf den Tisch)`,
+        dat: `dem Buch (mit dem Buch · im Buch)`,
+        note: `Neuter: same Dativ ending (-em) as masculine.`
+      },
+      {
+        nom: `die Kinder`,
+        akk: `die Kinder (ohne ihre Kinder)`,
+        dat: `den Kindern (mit den Kindern)`,
+        note: `Plural Dativ: die -> den AND add -n to the noun (Kinder -> Kindern).`
+      },
+      {
+        nom: `die Männer`,
+        akk: `die Männer (sieht die Männer)`,
+        dat: `den Männern (mit den Männern)`,
+        note: `Plural Dativ: die -> den AND add -n to the noun (Männer -> Männern).`
+      }
+    ];
+
+    const SEPARABLE_VERBS = [
+      { subj: `Der Vater`, verbStem: `macht`, prefix: `aus`, inf: `ausmachen`, obj: `das Licht`, modal: `muss`, enSimple: `The father turns off the light.`, enModal: `The father has to turn off the light.` },
+      { subj: `Ich`, verbStem: `mache`, prefix: `an`, inf: `anmachen`, obj: `das Licht`, modal: `kann`, enSimple: `I turn on the light.`, enModal: `I can turn on the light.` },
+      { subj: `Ich`, verbStem: `schalte`, prefix: `ein`, inf: `einschalten`, obj: `das Radio`, modal: `will`, enSimple: `I switch on the radio.`, enModal: `I want to switch on the radio.` },
+      { subj: `Herr M.`, verbStem: `schaltet`, prefix: `aus`, inf: `ausschalten`, obj: `den Fernseher`, modal: `möchte`, enSimple: `Mr. M. switches off the TV.`, enModal: `Mr. M. would like to switch off the TV.` },
+      { subj: `Der Mann`, verbStem: `macht`, prefix: `auf`, inf: `aufmachen`, obj: `die Tür`, modal: `soll`, enSimple: `The man opens the door.`, enModal: `The man is supposed to open the door.` },
+      { subj: `Meine Frau`, verbStem: `macht`, prefix: `zu`, inf: `zumachen`, obj: `den Kühlschrank`, modal: `möchte`, enSimple: `My wife closes the fridge.`, enModal: `My wife would like to close the fridge.` },
+      { subj: `Ich`, verbStem: `rufe`, prefix: `an`, inf: `anrufen`, obj: `meine Schwester`, modal: `muss`, enSimple: `I call my sister.`, enModal: `I have to call my sister.` },
+      { subj: `Wir`, verbStem: `kaufen`, prefix: `ein`, inf: `einkaufen`, obj: `im Supermarkt`, modal: `können`, enSimple: `We shop in the supermarket.`, enModal: `We can shop in the supermarket.` },
+      { subj: `Frau Noll`, verbStem: `steht`, prefix: `auf`, inf: `aufstehen`, obj: `um sieben Uhr`, modal: `muss`, enSimple: `Mrs. Noll gets up at 7 o'clock.`, enModal: `Mrs. Noll has to get up at 7 o'clock.` },
+      { subj: `Ich`, verbStem: `bereite`, prefix: `vor`, inf: `vorbereiten`, obj: `die Vorlesung`, modal: `muss`, enSimple: `I prepare the lecture.`, enModal: `I have to prepare the lecture.` }
+    ];
+
+    const SPATIAL_PAIRS = [
+      {
+        title: `liegen (static) vs. legen (action)`,
+        wo: { verb: `liegt`, prep: `auf`, art: `dem`, noun: `Teppich`, sentence: `Das Hemd liegt auf dem Teppich.`, en: `Wo? The shirt is lying on the carpet (horizontal, no movement).` },
+        wohin: { verb: `legt`, prep: `auf`, art: `den`, noun: `Teppich`, sentence: `Dominik legt das Hemd auf den Teppich.`, en: `Wohin? Dominik lays the shirt onto the carpet (movement A to B).` },
+        type: `horizontal`
+      },
+      {
+        title: `stehen (static) vs. stellen (action)`,
+        wo: { verb: `steht`, prep: `auf`, art: `dem`, noun: `Polster`, sentence: `Der Tennisschläger steht auf dem Polster.`, en: `Wo? The tennis racket is standing upright on the cushion.` },
+        wohin: { verb: `stellt`, prep: `auf`, art: `den`, noun: `Polster`, sentence: `Dominik stellt den Tennisschläger auf den Polster.`, en: `Wohin? Dominik places the tennis racket upright onto the cushion.` },
+        type: `upright`
+      },
+      {
+        title: `sitzen (static) vs. setzen (action)`,
+        wo: { verb: `sitzt`, prep: `zwischen`, art: `dem`, noun: `Tisch und dem Schrank`, sentence: `Dominik sitzt zwischen dem Tisch und dem Schrank.`, en: `Wo? Dominik is sitting between the table and the wardrobe.` },
+        wohin: { verb: `setzt`, prep: `zwischen`, art: `den`, noun: `Tisch und den Schrank`, sentence: `Dominik setzt das Kind zwischen den Tisch und den Schrank.`, en: `Wohin? Dominik seats the child between the table and the wardrobe.` },
+        type: `seat`
+      },
+      {
+        title: `hängen (static) vs. hängen (action)`,
+        wo: { verb: `hängt`, prep: `am`, art: ``, noun: `Schlüssel`, sentence: `Die Krawatte hängt am (an dem) Schlüssel.`, en: `Wo? The tie is hanging on the key (stays hängen!).` },
+        wohin: { verb: `hängt`, prep: `an`, art: `den`, noun: `Schlüssel`, sentence: `Dominik hängt die Krawatte an den Schlüssel.`, en: `Wohin? Dominik hangs the tie onto the key (same verb, Akkusativ!).` },
+        type: `hang`
+      },
+      {
+        title: `sein (always static · Wo?)`,
+        wo: { verb: `ist`, prep: `unter`, art: `dem`, noun: `Sessel`, sentence: `Das Buch ist unter dem Sessel.`, en: `Wo? The book is under the armchair (sein always takes Dativ).` },
+        wohin: { verb: `ist`, prep: `unter`, art: `dem`, noun: `Sessel`, sentence: `Achtung: "sein" never expresses A-to-B motion — always Wo? + Dativ!`, en: `Use legen/stellen/setzen/hängen when moving an object from A to B.` },
+        type: `under`
+      }
+    ];
+
+    const ROUTES = [
+      {
+        question: `Entschuldigung, wie komme ich zum Stadion?`,
+        answerIntro: `Starting at Bahnhof (bottom-left), heading to Stadion (east on Hauptstraße).`,
+        steps: [
+          { text: `Gehen Sie bis zur Ecke / bis zur Hauptstraße geradeaus.`, path: `M 70 250 L 140 250`, dot: [140, 250] },
+          { text: `Und dann gehen Sie die Hauptstraße geradeaus / entlang.`, path: `M 70 250 L 140 250 L 320 250`, dot: [320, 250] },
+          { text: `Gehen Sie über drei Ampeln / Kreuzungen (Akkusativ: über die Kreuzungen).`, path: `M 70 250 L 140 250 L 420 250`, dot: [420, 250] },
+          { text: `Nach der dritten Ampel sehen Sie an der rechten Seite das Stadion.`, path: `M 70 250 L 140 250 L 480 250 L 480 272`, dot: [480, 272] }
+        ]
+      },
+      {
+        question: `Entschuldigung, wie komme ich vom Stadion zu einem Café?`,
+        answerIntro: `Starting at Stadion, heading north-west to the Café across from the Spielplatz.`,
+        steps: [
+          { text: `Gehen Sie links aus dem Stadion bis zur Hauptstraße.`, path: `M 480 272 L 480 250`, dot: [480, 250] },
+          { text: `Auf der Hauptstraße biegen Sie links ab und gehen bis zur zweiten Ampel.`, path: `M 480 272 L 480 250 L 280 250`, dot: [280, 250] },
+          { text: `Bei der Neue Straße biegen Sie rechts ab (nach Norden).`, path: `M 480 272 L 480 250 L 280 250 L 280 155`, dot: [280, 155] },
+          { text: `Nach der Ampel ist das Café an der linken Seite (gegenüber dem Spielplatz).`, path: `M 480 272 L 480 250 L 280 250 L 280 140 L 250 140`, dot: [250, 140] }
+        ]
+      },
+      {
+        question: `Entschuldigung, gibt es hier in der Nähe eine Apotheke?`,
+        answerIntro: `Starting at Spielplatz, walking along Marktstraße past the Post.`,
+        steps: [
+          { text: `Gehen Sie die Marktstraße geradeaus / entlang bis zur zweiten Kreuzung.`, path: `M 310 130 L 380 130`, dot: [380, 130] },
+          { text: `Bei der Kreuzung biegen Sie rechts ab und gehen an der Post vorbei.`, path: `M 310 130 L 380 130 L 380 190`, dot: [380, 190] },
+          { text: `Gehen Sie weiter geradeaus bis zur nächsten Ampel.`, path: `M 310 130 L 380 130 L 380 240`, dot: [380, 240] },
+          { text: `Dort sehen Sie an der linken Seite die Apotheke.`, path: `M 310 130 L 380 130 L 380 240 L 405 240`, dot: [405, 240] }
+        ]
+      },
+      {
+        question: `Polizei-Quiz: "Entschuldigung, wie kommen wir zur Bank?"`,
+        answerIntro: `Course Skriptum Quiz: Follow the police officer's directions from the intersection to find where the gangsters are!`,
+        steps: [
+          { text: `Fahren Sie geradeaus (entlang der Hauptstraße).`, path: `M 140 250 L 280 250`, dot: [280, 250] },
+          { text: `An der zweiten Ampel biegen Sie rechts ab.`, path: `M 140 250 L 280 250 L 280 190`, dot: [280, 190] },
+          { text: `Fahren Sie bis zur nächsten Ampel und biegen Sie dann links ab.`, path: `M 140 250 L 280 250 L 280 130 L 180 130`, dot: [180, 130] },
+          { text: `Die Bank ist auf der rechten Seite (neben der Polizeistation)!`, path: `M 140 250 L 280 250 L 280 130 L 180 130 L 180 108`, dot: [180, 108] }
+        ]
+      }
+    ];
+
+    const PERFEKT_VERBS = [
+      { inf: `duschen`, stem: `dusch`, end: `t`, partizip: `geduscht`, ex: `Ich habe gestern Nachmittag fünf Minuten geduscht.`, rule: `Standard stem (-sch): add ge- in front and -t at the end.` },
+      { inf: `kaufen`, stem: `kauf`, end: `t`, partizip: `gekauft`, ex: `Ich habe gestern einen neuen Herd gekauft.`, rule: `Standard stem (-f): add ge- in front and -t at the end.` },
+      { inf: `tanzen`, stem: `tanz`, end: `t`, partizip: `getanzt`, ex: `Er hat in der Diskothek nur mit ihr getanzt.`, rule: `Standard stem (-z): add ge- in front and -t at the end.` },
+      { inf: `kochen`, stem: `koch`, end: `t`, partizip: `gekocht`, ex: `Zu Weihnachten haben wir immer sehr viel gekocht.`, rule: `Standard stem (-ch): add ge- in front and -t at the end.` },
+      { inf: `spielen`, stem: `spiel`, end: `t`, partizip: `gespielt`, ex: `Die Kinder haben den ganzen Nachmittag im Schnee gespielt.`, rule: `Standard stem (-l): add ge- in front and -t at the end.` },
+      { inf: `antworten`, stem: `antwort`, end: `et`, partizip: `geantwortet`, ex: `Er hat auf die Frage sofort geantwortet.`, rule: `Stem ends in -t! Insert -e- before -t: ge- + antwort + -et.` },
+      { inf: `arbeiten`, stem: `arbeit`, end: `et`, partizip: `gearbeitet`, ex: `Wann hast du bei dieser Firma gearbeitet?`, rule: `Stem ends in -t! Insert -e- before -t: ge- + arbeit + -et.` },
+      { inf: `kosten`, stem: `kost`, end: `et`, partizip: `gekostet`, ex: `Wie viel hat dein neues Auto gekostet?`, rule: `Stem ends in -t! Insert -e- before -t: ge- + kost + -et.` },
+      { inf: `regnen`, stem: `regn`, end: `et`, partizip: `geregnet`, ex: `Letzten Urlaub hat es dauernd geregnet.`, rule: `Stem ends in -gn! Insert -e- before -t: ge- + regn + -et.` },
+      { inf: `rechnen`, stem: `rechn`, end: `et`, partizip: `gerechnet`, ex: `Wir haben alle Kosten genau gerechnet.`, rule: `Stem ends in -chn! Insert -e- before -t: ge- + rechn + -et.` },
+      { inf: `atmen`, stem: `atm`, end: `et`, partizip: `geatmet`, ex: `Nach dem Sport hat er tief geatmet.`, rule: `Stem ends in -tm! Insert -e- before -t: ge- + atm + -et.` },
+      { inf: `reden`, stem: `red`, end: `et`, partizip: `geredet`, ex: `Sie hat im Büro viel zu viel geredet.`, rule: `Stem ends in -d! Insert -e- before -t: ge- + red + -et.` }
+    ];
+
+    /* Inline Quick Drills */
+    const DRILLS = {
+      sep: [
+        { id: `sep1`, prompt: `1. Der Vater ___ das Licht ___. (ausmachen, Simple Present)`, opts: [`macht ... aus`, `ausmacht`, `macht ... an`, `muss ... aus`], ans: 0, exp: `In Simple Present, "ausmachen" splits: conjugated "macht" in Position 2, prefix "aus" at the end.` },
+        { id: `sep2`, prompt: `2. Ich muss heute meine Schwester ___. (anrufen, with modal)`, opts: [`rufe ... an`, `anrufen`, `anrufe`, `rufen an`], ans: 1, exp: `With modal verb "muss", the separable verb stays glued together as an infinitive at the end: "anrufen".` },
+        { id: `sep3`, prompt: `3. Frau Noll ___ um sieben Uhr ___. (aufstehen)`, opts: [`aufsteht`, `steht ... auf`, `aufstehen`, `steht ... aus`], ans: 1, exp: `Simple present without modal: "steht" in Position 2, prefix "auf" at the end.` },
+        { id: `sep4`, prompt: `4. Kannst du bitte den Fernseher ___? (einschalten)`, opts: [`schaltest ... ein`, `einschaltest`, `einschalten`, `schalten ein`], ans: 2, exp: `Modal verb "Kannst" is in Position 1, so the infinitive "einschalten" goes uncut to the end.` },
+        { id: `sep5`, prompt: `5. Susanne ___ das Fenster ___. (aufmachen)`, opts: [`macht ... auf`, `aufmacht`, `machen ... auf`, `macht ... zu`], ans: 0, exp: `"aufmachen" means to open ("zumachen" means to close). In Simple Present it splits: "macht ... auf".` }
+      ],
+      prep: [
+        { id: `prep1`, prompt: `1. Ich laufe jeden Morgen ___ Donau ___. (die Donau)`, opts: [`die ... entlang`, `der ... entlang`, `durch ... die`, `dem ... entlang`], ans: 0, exp: `"entlang" takes Akkusativ as a postposition (after the noun): "die Donau entlang".` },
+        { id: `prep2`, prompt: `2. Ich gehe heute ___ Ärztin. (die Ärztin, movement A→B)`, opts: [`bei der`, `zur`, `zum`, `nach`], ans: 1, exp: `Movement toward a person/profession uses "zu + Dativ". "die Ärztin" -> "zu der" -> "zur Ärztin".` },
+        { id: `prep3`, prompt: `3. Ich bin jetzt ___ Arzt. (der Arzt, static presence)`, opts: [`zum`, `beim`, `zu der`, `mit dem`], ans: 1, exp: `Static location at a person/office uses "bei + Dativ". "der Arzt" -> "bei dem" -> "beim Arzt".` },
+        { id: `prep4`, prompt: `4. Ich lebe ___ 11 Jahren in Wien. (started in past, still here)`, opts: [`ab`, `seit`, `bis`, `gegen`], ans: 1, exp: `"seit" is used for actions beginning in the past and continuing now (+ Present tense). "ab" is for future start.` },
+        { id: `prep5`, prompt: `5. Die Bank ist gegenüber ___ Supermarkt. (der Supermarkt)`, opts: [`den`, `der`, `dem`, `des`], ans: 2, exp: `"gegenüber" always takes Dativ. Masculine "der Supermarkt" becomes "dem Supermarkt".` },
+        { id: `prep6`, prompt: `6. Er reitet durch ___ kleinen, schönen Wald. (der Wald)`, opts: [`dem`, `der`, `den`, `das`], ans: 2, exp: `"durch" is an Akkusativ-only preposition. Masculine "der Wald" becomes "den Wald".` }
+      ],
+      wechsel: [
+        { id: `wech1`, prompt: `1. Wo ist das Hemd? — Das Hemd ___ auf ___ Teppich. (der Teppich)`, opts: [`liegt / dem`, `legt / den`, `liegt / den`, `legt / dem`], ans: 0, exp: `"Wo?" asks for static location -> use static verb "liegen" (liegt) + Dativ ("dem Teppich").` },
+        { id: `wech2`, prompt: `2. Wohin ___ Dominik den Tennisschläger? — Auf ___ Polster. (der Polster)`, opts: [`steht / dem`, `stellt / den`, `stellt / dem`, `steht / den`], ans: 1, exp: `"Wohin?" asks for movement A→B -> use action verb "stellen" (stellt) + Akkusativ ("den Polster").` },
+        { id: `wech3`, prompt: `3. Wo ___ die Krawatte? — ___ Schlüssel. (der Schlüssel)`, opts: [`hängt / An den`, `hängt / Am`, `legt / Im`, `sitzt / Auf dem`], ans: 1, exp: `"hängen" is the same verb for both! Static "Wo?" requires Dativ: "an + dem = am Schlüssel".` },
+        { id: `wech4`, prompt: `4. Wohin ___ Dominik das Kind? — Zwischen ___ Tisch und ___ Schrank.`, opts: [`sitzt / dem / dem`, `setzt / den / den`, `setzt / dem / dem`, `sitzt / den / den`], ans: 1, exp: `"Wohin?" takes action verb "setzen" (setzt) + Akkusativ: masculine "der Tisch / der Schrank" -> "den Tisch und den Schrank".` },
+        { id: `wech5`, prompt: `5. Ich stelle meine Bücher ___ Regal. (das Regal, movement)`, opts: [`im`, `ins`, `auf dem`, `am`], ans: 1, exp: `"stellen" = movement A→B (Wohin?) -> Akkusativ. Neuter "das Regal": "in + das = ins Regal".` },
+        { id: `wech6`, prompt: `6. Mein Auto steht ___ Garage. (die Garage, static)`, opts: [`in die`, `in der`, `ins`, `in dem`], ans: 1, exp: `"stehen" = static (Wo?) -> Dativ. Feminine "die Garage" becomes "in der Garage".` }
+      ],
+      dir: [
+        { id: `dir1`, prompt: `1. Entschuldigung, wie komme ich ___ Post? (die Post)`, opts: [`zum`, `zur`, `in der`, `nach`], ans: 1, exp: `Feminine "die Post" + "zu" (+ Dativ): "zu + der = zur Post".` },
+        { id: `dir2`, prompt: `2. Entschuldigung, gibt es hier in der Nähe ___ Bankautomat? (der Bankautomat)`, opts: [`ein`, `eine`, `einen`, `einem`], ans: 2, exp: `"es gibt" ALWAYS takes Akkusativ! Masculine "der Bankautomat" becomes "einen Bankautomat".` },
+        { id: `dir3`, prompt: `3. Gehen Sie ___ Rathaus vorbei. (das Rathaus)`, opts: [`am`, `ans`, `über das`, `durch das`], ans: 0, exp: `"vorbeigehen an" takes Dativ. Neuter "das Rathaus": "an + dem = am Rathaus".` },
+        { id: `dir4`, prompt: `4. Nehmen Sie die ___ Straße rechts! (2nd)`, opts: [`zwei`, `zweite`, `zweiten`, `zwanzigste`], ans: 1, exp: `Ordinal for 2 with "die ... Straße": "die zweite Straße".` },
+        { id: `dir5`, prompt: `5. Ich fahre oft ___ Straßenbahn. (die Straßenbahn)`, opts: [`mit dem`, `mit der`, `mit die`, `zu der`], ans: 1, exp: `"mit" always takes Dativ. Feminine "die Straßenbahn" becomes "mit der Straßenbahn".` }
+      ],
+      perf: [
+        { id: `perf1`, prompt: `1. Wann ___ du bei dieser Firma ___? (arbeiten)`, opts: [`hast / gearbeit`, `hast / gearbeitet`, `bist / gearbeitet`, `habe / gearbeitet`], ans: 1, exp: `"arbeiten" stem ends in -t ("arbeit-"), so add "-et": "hast ... gearbeitet".` },
+        { id: `perf2`, prompt: `2. Letzten Urlaub ___ es dauernd ___. (regnen)`, opts: [`hat / geregnt`, `hat / geregnet`, `ist / geregnet`, `haben / geregnet`], ans: 1, exp: `"regnen" stem ends in -gn ("regn-"), triggering "-et": "hat ... geregnet".` },
+        { id: `perf3`, prompt: `3. Auf der Party ___ ihr sehr laut Musik ___. (hören)`, opts: [`habt / gehört`, `hast / gehört`, `haben / gehört`, `habt / gehöret`], ans: 0, exp: `"ihr" conjugates "haben" as "habt"; standard stem "hör-" takes "-t": "habt ... gehört".` },
+        { id: `perf4`, prompt: `4. Wie viel ___ dein neues Auto ___? (kosten)`, opts: [`hat / gekost`, `hat / gekostet`, `haben / gekostet`, `hat / kosten`], ans: 1, exp: `"kosten" stem ends in -t ("kost-"), so add "-et": "hat ... gekostet".` },
+        { id: `perf5`, prompt: `5. Den ganzen Samstag ___ sie die Wohnung ___. (putzen)`, opts: [`hat / geputzt`, `hat / geputzet`, `ist / geputzt`, `habt / geputzt`], ans: 0, exp: `Standard stem "putz-" takes "-t": "geputzt".` }
+      ]
+    };
+
+    /* 24 Flashcards */
+    const FLASHCARDS = [
+      { id: 0, cat: `separable`, catLabel: `Separable Verbs`, front: `Translate & split: "The father turns off the light." (ausmachen)`, ans: `Der Vater macht das Licht aus.`, note: `Simple Present: conjugated stem in Pos. 2, prefix "aus" at the very end.` },
+      { id: 1, cat: `separable`, catLabel: `Separable Verbs`, front: `Rewrite with modal "müssen": "Der Vater macht das Licht aus."`, ans: `Der Vater muss das Licht ausmachen.`, note: `With a modal verb, the separable verb stays glued together as an infinitive at the end.` },
+      { id: 2, cat: `separable`, catLabel: `Separable Verbs`, front: `Opposite of "einschalten" (to switch on) and "aufmachen" (to open)?`, ans: `ausschalten (switch off) & zumachen (close)`, note: `Also remember: anmachen <-> ausmachen, einsteigen <-> aussteigen.` },
+      { id: 3, cat: `separable`, catLabel: `Separable Verbs`, front: `Put into a sentence: "Kannst du / das Fenster / aufmachen?"`, ans: `Kannst du das Fenster aufmachen?`, note: `Modal "Kannst" in Pos. 1 (yes/no question) -> "aufmachen" uncut at the end.` },
+      { id: 4, cat: `preps`, catLabel: `Akkusativ Preps`, front: `List all 7 prepositions that ALWAYS take Akkusativ.`, ans: `durch, für, ohne, gegen, um, bis, entlang`, note: `Remember: "entlang" is a postposition (e.g. "die Donau entlang").` },
+      { id: 5, cat: `preps`, catLabel: `Dativ Preps`, front: `List all 9 prepositions that ALWAYS take Dativ.`, ans: `aus, bei, mit, nach, von, zu, gegenüber, seit, ab`, note: `Dativ shifts: der/das -> dem, die -> der, Plural die -> den + -n.` },
+      { id: 6, cat: `preps`, catLabel: `Dativ Preps`, front: `What is the difference between "zu" and "bei"?`, ans: `zu = movement A->B ("Ich gehe zu Peter") · bei = static ("Ich bin bei Peter")`, note: `Contractions: zu + dem = zum, zu + der = zur, bei + dem = beim.` },
+      { id: 7, cat: `preps`, catLabel: `Dativ Preps`, front: `What is the difference between "seit" and "ab"?`, ans: `seit = started in the past, still ongoing (+ Präsens) · ab = starts in the future`, note: `"Ich bin seit Freitag auf Urlaub" vs. "Ich bin ab Freitag auf Urlaub."` },
+      { id: 8, cat: `preps`, catLabel: `Dativ Plural`, front: `Complete: "Ich spiele mit ___ ___." (die Kinder / die Männer)`, ans: `mit den Kindern / mit den Männern`, note: `Dativ Plural uses "den" AND adds "-n" to the plural noun (unless it already ends in -n or -s).` },
+      { id: 9, cat: `preps`, catLabel: `Dativ Trap`, front: `Why is "zu der meiner Frau" incorrect?`, ans: `Never combine an article and a possessive pronoun! Say "zu meiner Frau" or "zur Frau".`, note: `Choose either the definite article OR the possessive pronoun.` },
+      { id: 10, cat: `wechsel`, catLabel: `Wo vs. Wohin`, front: `List the 9 Wechselpräpositionen (two-way prepositions).`, ans: `in, auf, an, unter, über, vor, hinter, neben, zwischen`, note: `Wo? (static, no A->B) = Dativ · Wohin? (movement A->B) = Akkusativ.` },
+      { id: 11, cat: `wechsel`, catLabel: `Positional Verbs`, front: `Translate: "Dominik lays the shirt onto the carpet." vs. "The shirt lies on the carpet."`, ans: `Dominik legt das Hemd auf den Teppich. / Das Hemd liegt auf dem Teppich.`, note: `legen (action -> Akkusativ "den") vs. liegen (static -> Dativ "dem").` },
+      { id: 12, cat: `wechsel`, catLabel: `Positional Verbs`, front: `Translate: "He puts the racket upright onto the cushion." (der Polster)`, ans: `Er stellt den Tennisschläger auf den Polster.`, note: `stellen (upright placement -> Akkusativ) vs. stehen (upright static -> Dativ).` },
+      { id: 13, cat: `wechsel`, catLabel: `Positional Verbs`, front: `How does "hängen" behave in Wo? vs. Wohin?`, ans: `Same verb "hängen" for both! Wo? -> am (an dem) · Wohin? -> an den`, note: `"Die Krawatte hängt am Schlüssel" vs. "Er hängt die Krawatte an den Schlüssel."` },
+      { id: 14, cat: `wechsel`, catLabel: `Positional Verbs`, front: `Translate: "He seats the child between the table and the wardrobe."`, ans: `Er setzt das Kind zwischen den Tisch und den Schrank.`, note: `setzen (action -> Akkusativ) vs. sitzen (static -> Dativ: "zwischen dem Tisch und dem Schrank").` },
+      { id: 15, cat: `directions`, catLabel: `Wegbeschreibung`, front: `Why is "Wie komme ich zum Post?" wrong?`, ans: `"die Post" is feminine: zu + der = zur Post!`, note: `zum (zu+dem) is only for masculine (der Bahnhof) and neuter (das Stadion).` },
+      { id: 16, cat: `directions`, catLabel: `Wegbeschreibung`, front: `Complete: "Entschuldigung, gibt es hier in der Nähe ___ Park?" (der Park)`, ans: `einen Park`, note: `"es gibt" always takes Akkusativ! Masculine "ein" -> "einen".` },
+      { id: 17, cat: `directions`, catLabel: `Wegbeschreibung`, front: `What case does "vorbeigehen an" take? Give an example with "die Kirche".`, ans: `Dativ! "Gehen Sie an der Kirche vorbei." (or "am Rathaus vorbei")`, note: `Remember: "die Kirche" -> Dativ "der Kirche"; "das Rathaus" -> "an + dem = am Rathaus".` },
+      { id: 18, cat: `directions`, catLabel: `Ordinals`, front: `Give the German ordinals for 1st, 2nd, 3rd, 7th, and 20th (with "die ... Straße").`, ans: `erste, zweite, dritte, siebte (siebente), zwanzigste`, note: `1–19 add -te (irregular: erste, dritte, siebte, achte); 20+ add -ste.` },
+      { id: 19, cat: `directions`, catLabel: `Transit`, front: `What are the articles for Bus, Straßenbahn, U-Bahn, and Taxi?`, ans: `der Bus, die Straßenbahn, die U-Bahn, das Taxi`, note: `With "mit" (+ Dativ): mit dem Bus/Taxi, mit der Straßenbahn/U-Bahn.` },
+      { id: 20, cat: `perfekt`, catLabel: `Perfekt`, front: `What is the formula for regular (weak) Perfekt?`, ans: `haben (conjugated in Position 2) + ... + ge- + stem + -t (at sentence end)`, note: `Example: "Ich habe gestern fünf Minuten geduscht."` },
+      { id: 21, cat: `perfekt`, catLabel: `Perfekt`, front: `When does a weak verb add "-et" instead of "-t" in Partizip II?`, ans: `When the stem ends in -t, -d, -chn, -gn, or -tm.`, note: `Examples: geantwortet, gearbeitet, geregnet, gerechnet, geatmet, geredet.` },
+      { id: 22, cat: `perfekt`, catLabel: `Perfekt`, front: `Form the Partizip II of: "arbeiten", "regnen", "kosten".`, ans: `gearbeitet, geregnet, gekostet`, note: `All three stems end in -t or -gn, so all three require "-et".` },
+      { id: 23, cat: `perfekt`, catLabel: `Perfekt`, front: `Form the Partizip II of: "kaufen", "tanzen", "putzen", "sparen".`, ans: `gekauft, getanzt, geputzt, gespart`, note: `Standard stems (not ending in -t/-d/-chn/-gn/-tm) take simple "-t".` }
+    ];
+
+    /* 20-Question Midterm Exam */
+    const QUIZ_QUESTIONS = [
+      { id: `q0`, topic: `Separable Verbs`, prompt: `1. Choose the correct Simple Present sentence for "aufmachen" (to open):`, opts: [`Eric aufmacht das Fenster.`, `Eric macht das Fenster auf.`, `Eric macht auf das Fenster.`, `Eric machen das Fenster auf.`], ans: 1, exp: `In Simple Present, the conjugated stem "macht" stays in Position 2 and the prefix "auf" moves to the end.` },
+      { id: `q1`, topic: `Separable Verbs`, prompt: `2. Complete with modal verb: "Es ist spät. Du musst morgen früh ___."`, opts: [`aufstehst`, `stehst auf`, `aufstehen`, `aufgestanden`], ans: 2, exp: `Modal verb "musst" sends the separable verb to the sentence end as an attached infinitive: "aufstehen".` },
+      { id: `q2`, topic: `Separable Verbs`, prompt: `3. Which pair gives true opposites from your Lektion 4 notes?`, opts: [`einschalten / anmachen`, `aufmachen / zumachen`, `ausmachen / ausschalten`, `einkaufen / anrufen`], ans: 1, exp: `"aufmachen" (to open) and "zumachen" (to close) are direct opposites.` },
+      { id: `q3`, topic: `Akkusativ vs. Dativ`, prompt: `4. "Das Geschenk ist für ___ Bruder." (mein Bruder)`, opts: [`mein`, `meinem`, `meinen`, `meiner`], ans: 2, exp: `"für" always takes Akkusativ. Masculine "mein Bruder" becomes "meinen Bruder".` },
+      { id: `q4`, topic: `Akkusativ vs. Dativ`, prompt: `5. "Ich gehe jeden Morgen ___ Fluss entlang." (der Fluss)`, opts: [`dem`, `der`, `den`, `das`], ans: 2, exp: `"entlang" (as a postposition) takes Akkusativ: masculine "der Fluss" -> "den Fluss entlang".` },
+      { id: `q5`, topic: `Akkusativ vs. Dativ`, prompt: `6. "Sie geht heute ___ Arzt, weil sie verkühlt ist." (der Arzt)`, opts: [`beim`, `zum`, `zur`, `nach`], ans: 1, exp: `Movement toward a person/doctor uses "zu + Dativ". Masculine "der Arzt" -> "zu + dem = zum Arzt".` },
+      { id: `q6`, topic: `Akkusativ vs. Dativ`, prompt: `7. "Am Mittwoch war ich zwei Stunden ___ Arzt." (der Arzt, static)`, opts: [`zum`, `beim`, `zu der`, `mit dem`], ans: 1, exp: `Static location at the doctor's office (no A->B movement) uses "bei + Dativ" -> "beim Arzt".` },
+      { id: `q7`, topic: `Akkusativ vs. Dativ`, prompt: `8. "Ich lebe ___ 2015 in Wien." (started in 2015, still true today)`, opts: [`ab`, `seit`, `bis`, `vor`], ans: 1, exp: `Use "seit" + Present tense for an action starting in the past and continuing now. ("ab" is for future start.)` },
+      { id: `q8`, topic: `Akkusativ vs. Dativ`, prompt: `9. Choose the grammatically correct Dativ Plural sentence:`, opts: [`Ich spiele mit die Kinder.`, `Ich spiele mit den Kinder.`, `Ich spiele mit den Kindern.`, `Ich spiele mit dem Kindern.`], ans: 2, exp: `Dativ Plural changes "die" to "den" AND adds "-n" to the noun: "mit den Kindern".` },
+      { id: `q9`, topic: `Akkusativ vs. Dativ`, prompt: `10. Which sentence avoids the "double determiner" mistake from your Deutsch 3 notes?`, opts: [`Ich fahre zu der meiner Frau.`, `Ich fahre zu meiner Frau.`, `Ich fahre bei meiner Frau.`, `Ich fahre zu meine Frau.`], ans: 1, exp: `Use EITHER an article ("zur Frau") OR a possessive pronoun ("zu meiner Frau"), never both together.` },
+      { id: `q10`, topic: `Wo vs. Wohin & Verbs`, prompt: `11. "Wo ist das Buch? — Das Buch ___ unter ___ Sessel." (der Sessel)`, opts: [`liegt / dem`, `legt / den`, `liegt / den`, `legt / dem`], ans: 0, exp: `"Wo?" asks for static position -> static verb "liegt" + Dativ "dem Sessel".` },
+      { id: `q11`, topic: `Wo vs. Wohin & Verbs`, prompt: `12. "Wohin hängt Dominik die Krawatte? — Er hängt sie ___ Schlüssel." (der Schlüssel)`, opts: [`am`, `an den`, `an dem`, `auf dem`], ans: 1, exp: `"Wohin?" asks for movement A->B -> Akkusativ. Masculine "der Schlüssel" -> "an den Schlüssel".` },
+      { id: `q12`, topic: `Wo vs. Wohin & Verbs`, prompt: `13. "Ich setze mich auf ___ Sessel." (der Sessel, action of sitting down)`, opts: [`dem`, `den`, `der`, `das`], ans: 1, exp: `"sich setzen" describes movement into the seat (Wohin?) -> Akkusativ: "auf den Sessel".` },
+      { id: `q13`, topic: `Wo vs. Wohin & Verbs`, prompt: `14. "Mein Schlafzimmer liegt zwischen ___ Gästezimmer und ___ Wohnzimmer." (both neuter)`, opts: [`das / das`, `den / den`, `dem / dem`, `der / der`], ans: 2, exp: `"liegen" = static (Wo?) -> Dativ. Neuter "das" changes to "dem" in both slots.` },
+      { id: `q14`, topic: `Wegbeschreibung`, prompt: `15. "Entschuldigung, wie komme ich ___ Universität Wien?" (die Universität)`, opts: [`zum`, `zur`, `nach`, `in die`], ans: 1, exp: `"die Universität" is feminine. "zu + Dativ" turns "die" into "der" -> "zu + der = zur Universität".` },
+      { id: `q15`, topic: `Wegbeschreibung`, prompt: `16. "Entschuldigung, gibt es hier in der Nähe ___ Supermarkt?" (der Supermarkt)`, opts: [`ein`, `eine`, `einen`, `einem`], ans: 2, exp: `"es gibt" always triggers Akkusativ. Masculine "der Supermarkt" takes "einen Supermarkt".` },
+      { id: `q16`, topic: `Wegbeschreibung`, prompt: `17. "Gehen Sie ___ Kirche vorbei und nehmen Sie die ___ Straße links." (die Kirche / 3rd)`, opts: [`an die / drei`, `an der / dritte`, `am / dritten`, `an der / drei`], ans: 1, exp: `"vorbeigehen an" takes Dativ ("an der Kirche vorbei"), and the ordinal for 3 is "dritte".` },
+      { id: `q17`, topic: `Perfekt`, prompt: `18. Complete the Perfekt: "Die Nachbarin ___ gestern ein Paket ___." (schicken)`, opts: [`hat / geschickt`, `hat / geschicket`, `ist / geschickt`, `habt / geschickt`], ans: 0, exp: `Standard stem "schick-" takes "-t" (no -e- insertion): "hat ... geschickt".` },
+      { id: `q18`, topic: `Perfekt`, prompt: `19. Complete the Perfekt: "Der Politiker ___ auf die Frage nicht ___." (antworten)`, opts: [`hat / geantwort`, `hat / geantwortet`, `ist / geantwortet`, `haben / geantwortet`], ans: 1, exp: `The stem "antwort-" ends in -t, so it MUST insert -e- before -t: "geantwortet".` },
+      { id: `q19`, topic: `Perfekt`, prompt: `20. Choose the correct word order in Perfekt:`, opts: [`Ich habe geduscht gestern im Badezimmer.`, `Ich habe gestern im Badezimmer geduscht.`, `Ich gestern habe im Badezimmer geduscht.`, `Ich geduscht habe gestern im Badezimmer.`], ans: 1, exp: `Conjugated "habe" stays in Position 2, while the Partizip II ("geduscht") goes to the very end.` }
+    ];
+
+    /* ============================================================
+       2. APPLICATION STATE & PERSISTENCE
+       ============================================================ */
+    let appState = {
+      articleView: `definite`,
+      nounIdx: 0,
+      sepVerbIdx: 0,
+      sepMode: `simple`,
+      spatialIdx: 0,
+      spatialMode: `wo`,
+      routeIdx: 0,
+      routeStepIdx: 0,
+      perfektIdx: 0,
+      fcFilter: `all`,
+      fcIndex: 0,
+      fcFlipped: false,
+      fcMastered: [],
+      drillAnswers: {},
+      quizAnswers: {},
+      quizFilter: `all`
+    };
+
+    function saveState() {
+      if (window.notebookAppApi && typeof window.notebookAppApi.setAppState === `function`) {
+        window.notebookAppApi.setAppState(appState).catch(function () {});
+      }
+    }
+
+    function updateKPIs() {
+      const totalDrills = Object.keys(DRILLS).reduce(function (acc, k) { return acc + DRILLS[k].length; }, 0);
+      const solvedDrills = Object.keys(appState.drillAnswers).length;
+      const correctDrills = Object.keys(appState.drillAnswers).filter(function (id) {
+        return appState.drillAnswers[id].correct;
+      }).length;
+
+      const kpiDrills = document.getElementById(`kpi-drills`);
+      const kpiDrillsSub = document.getElementById(`kpi-drills-sub`);
+      if (kpiDrills) kpiDrills.textContent = solvedDrills + ` / ` + totalDrills;
+      if (kpiDrillsSub) {
+        kpiDrillsSub.textContent = solvedDrills === 0
+          ? `Try inline drills in each section`
+          : correctDrills + ` correct on first/current check`;
+      }
+
+      const masteredCount = appState.fcMastered.length;
+      const kpiCards = document.getElementById(`kpi-cards`);
+      const kpiCardsSub = document.getElementById(`kpi-cards-sub`);
+      const fcBadge = document.getElementById(`fc-progress-badge`);
+      if (kpiCards) kpiCards.textContent = masteredCount + ` / ` + FLASHCARDS.length;
+      if (kpiCardsSub) {
+        kpiCardsSub.textContent = masteredCount === FLASHCARDS.length
+          ? `All flashcards mastered`
+          : (FLASHCARDS.length - masteredCount) + ` cards remaining to master`;
+      }
+      if (fcBadge) fcBadge.textContent = masteredCount + ` / ` + FLASHCARDS.length + ` Mastered`;
+
+      const quizAnswered = Object.keys(appState.quizAnswers).length;
+      const quizCorrect = Object.keys(appState.quizAnswers).filter(function (id) {
+        return appState.quizAnswers[id].correct;
+      }).length;
+      const kpiQuiz = document.getElementById(`kpi-quiz`);
+      const kpiQuizSub = document.getElementById(`kpi-quiz-sub`);
+      const quizStatusBadge = document.getElementById(`quiz-status-badge`);
+      if (kpiQuiz) {
+        kpiQuiz.textContent = quizAnswered === 0
+          ? `—`
+          : Math.round((quizCorrect / QUIZ_QUESTIONS.length) * 100) + `%`;
+      }
+      if (kpiQuizSub) {
+        kpiQuizSub.textContent = quizAnswered === 0
+          ? `20-question exam not started`
+          : quizCorrect + ` / ` + quizAnswered + ` answered correctly`;
+      }
+      if (quizStatusBadge) {
+        quizStatusBadge.textContent = quizAnswered + ` / ` + QUIZ_QUESTIONS.length + ` Answered`;
+      }
+    }
+
+    /* ============================================================
+       3. SECTION 01: ARTICLES & NOUN TRANSFORMER
+       ============================================================ */
+    function renderArticleTable() {
+      const tbody = document.getElementById(`article-table-body`);
+      if (!tbody) return;
+      const rows = ARTICLE_VIEWS[appState.articleView] || ARTICLE_VIEWS.definite;
+      tbody.innerHTML = rows.map(function (r) {
+        return `<tr>
+          <td><span class="case-badge ` + r.cls + `">` + r.kase + `</span></td>
+          <td><strong>` + r.m + `</strong></td>
+          <td><strong>` + r.f + `</strong></td>
+          <td><strong>` + r.n + `</strong></td>
+          <td><strong>` + r.p + `</strong></td>
+        </tr>`;
+      }).join(``);
+    }
+
+    function setArticleView(view, btn) {
+      appState.articleView = view;
+      const parent = btn ? btn.parentElement : null;
+      if (parent) {
+        parent.querySelectorAll(`.filter-pill`).forEach(function (b) { b.classList.remove(`active`); });
+      }
+      if (btn) btn.classList.add(`active`);
+      renderArticleTable();
+      saveState();
+    }
+
+    function updateNounTransformer() {
+      const sel = document.getElementById(`noun-select`);
+      const out = document.getElementById(`noun-transformer-output`);
+      if (!sel || !out) return;
+      const idx = parseInt(sel.value, 10) || 0;
+      appState.nounIdx = idx;
+      const item = NOUN_SAMPLES[idx] || NOUN_SAMPLES[0];
+      out.innerHTML = `
+        <div class="drill-item" style="padding: var(--space-sm);">
+          <span class="case-badge case-nom">Nominativ</span>
+          <strong>` + item.nom + `</strong>
+        </div>
+        <div class="drill-item" style="padding: var(--space-sm);">
+          <span class="case-badge case-akk">Akkusativ</span>
+          <strong>` + item.akk + `</strong>
+        </div>
+        <div class="drill-item" style="padding: var(--space-sm);">
+          <span class="case-badge case-dat">Dativ</span>
+          <strong>` + item.dat + `</strong>
+        </div>
+        <p class="kpi-sub">` + item.note + `</p>
+      `;
+      saveState();
+    }
+
+    /* ============================================================
+       4. SECTION 02: SEPARABLE VERBS LAB
+       ============================================================ */
+    function renderSepLab() {
+      const sel = document.getElementById(`sep-verb-select`);
+      const stage = document.getElementById(`sep-sentence-stage`);
+      const trans = document.getElementById(`sep-translation`);
+      const btnSimple = document.getElementById(`sep-mode-simple`);
+      const btnModal = document.getElementById(`sep-mode-modal`);
+      if (!stage || !trans) return;
+
+      if (sel) sel.value = String(appState.sepVerbIdx);
+      const item = SEPARABLE_VERBS[appState.sepVerbIdx] || SEPARABLE_VERBS[0];
+
+      if (btnSimple && btnModal) {
+        btnSimple.classList.toggle(`active`, appState.sepMode === `simple`);
+        btnModal.classList.toggle(`active`, appState.sepMode === `modal`);
+      }
+
+      if (appState.sepMode === `simple`) {
+        stage.innerHTML = `
+          <span class="slot-pill">` + item.subj + `</span>
+          <span class="slot-pill slot-verb">` + item.verbStem + `</span>
+          <span class="slot-pill">` + item.obj + `</span>
+          <span class="slot-pill slot-prefix">` + item.prefix + `.</span>
+        `;
+        trans.innerHTML = `<strong>Simple Present:</strong> ` + item.enSimple + ` (Stem stays in Position 2; prefix <strong>` + item.prefix + `</strong> splits to the end.)`;
+      } else {
+        stage.innerHTML = `
+          <span class="slot-pill">` + item.subj + `</span>
+          <span class="slot-pill slot-verb">` + item.modal + `</span>
+          <span class="slot-pill">` + item.obj + `</span>
+          <span class="slot-pill slot-prefix">` + item.inf + `.</span>
+        `;
+        trans.innerHTML = `<strong>With Modal Verb:</strong> ` + item.enModal + ` (Modal takes Position 2; <strong>` + item.inf + `</strong> stays attached at the end.)`;
+      }
+    }
+
+    function updateSepLab() {
+      const sel = document.getElementById(`sep-verb-select`);
+      if (sel) appState.sepVerbIdx = parseInt(sel.value, 10) || 0;
+      renderSepLab();
+      saveState();
+    }
+
+    function setSepMode(mode) {
+      appState.sepMode = mode;
+      renderSepLab();
+      saveState();
+    }
+
+    /* ============================================================
+       5. SECTION 04: WECHSELPRÄPOSITIONEN & SPATIAL SVG LAB
+       ============================================================ */
+    function renderSpatialLab() {
+      const stage = document.getElementById(`spatial-svg-stage`);
+      const readout = document.getElementById(`spatial-sentence-readout`);
+      const btnWo = document.getElementById(`spatial-btn-wo`);
+      const btnWohin = document.getElementById(`spatial-btn-wohin`);
+      if (!stage || !readout) return;
+
+      const pair = SPATIAL_PAIRS[appState.spatialIdx] || SPATIAL_PAIRS[0];
+      const isWo = appState.spatialMode === `wo`;
+      const data = isWo ? pair.wo : pair.wohin;
+
+      if (btnWo && btnWohin) {
+        btnWo.classList.toggle(`active`, isWo);
+        btnWohin.classList.toggle(`active`, !isWo);
+      }
+
+      const accent = isWo ? `var(--case-dat)` : `var(--case-akk)`;
+      const tint = isWo ? `var(--case-dat-bg)` : `var(--case-akk-bg)`;
+      const modeTag = isWo ? `WO? · STATIC · DATIV` : `WOHIN? · MOTION A->B · AKKUSATIV`;
+
+      let graphic = ``;
+      if (pair.type === `horizontal`) {
+        graphic = `
+          <rect x="60" y="130" width="280" height="24" rx="3" fill="var(--surface-container-high)" stroke="var(--outline)" stroke-width="2" />
+          <text x="200" y="147" text-anchor="middle" font-family="var(--font-label)" font-size="11" fill="var(--on-surface)">DER TEPPICH</text>
+          ${isWo
+            ? `<rect x="145" y="106" width="110" height="22" rx="3" fill="${tint}" stroke="${accent}" stroke-width="2" />
+               <text x="200" y="121" text-anchor="middle" font-family="var(--font-label)" font-size="11" font-weight="600" fill="${accent}">DAS HEMD (liegt)</text>`
+            : `<rect x="85" y="42" width="100" height="22" rx="3" fill="${tint}" stroke="${accent}" stroke-width="2" stroke-dasharray="4 3" />
+               <text x="135" y="57" text-anchor="middle" font-family="var(--font-label)" font-size="10" fill="${accent}">DAS HEMD</text>
+               <path d="M 155 68 Q 200 85 200 124" fill="none" stroke="${accent}" stroke-width="2.5" marker-end="url(#arrowHead)" />
+               <text x="235" y="95" font-family="var(--font-label)" font-size="11" font-weight="600" fill="${accent}">legt A -> B</text>`
+          }
+        `;
+      } else if (pair.type === `upright`) {
+        graphic = `
+          <rect x="90" y="130" width="220" height="28" rx="6" fill="var(--surface-container-high)" stroke="var(--outline)" stroke-width="2" />
+          <text x="200" y="149" text-anchor="middle" font-family="var(--font-label)" font-size="11" fill="var(--on-surface)">DER POLSTER / DAS KISSEN</text>
+          ${isWo
+            ? `<rect x="184" y="58" width="32" height="72" rx="10" fill="${tint}" stroke="${accent}" stroke-width="2" />
+               <text x="200" y="98" text-anchor="middle" font-family="var(--font-label)" font-size="10" font-weight="600" fill="${accent}">steht</text>`
+            : `<rect x="92" y="42" width="32" height="58" rx="10" fill="${tint}" stroke="${accent}" stroke-width="2" stroke-dasharray="4 3" />
+               <path d="M 132 72 Q 180 72 195 122" fill="none" stroke="${accent}" stroke-width="2.5" marker-end="url(#arrowHead)" />
+               <text x="242" y="88" font-family="var(--font-label)" font-size="11" font-weight="600" fill="${accent}">stellt A -> B</text>`
+          }
+        `;
+      } else if (pair.type === `seat`) {
+        graphic = `
+          <rect x="45" y="95" width="90" height="60" rx="3" fill="var(--surface-container-high)" stroke="var(--outline)" stroke-width="2" />
+          <text x="90" y="128" text-anchor="middle" font-family="var(--font-label)" font-size="11" fill="var(--on-surface)">TISCH</text>
+          <rect x="265" y="75" width="90" height="80" rx="3" fill="var(--surface-container-high)" stroke="var(--outline)" stroke-width="2" />
+          <text x="310" y="118" text-anchor="middle" font-family="var(--font-label)" font-size="11" fill="var(--on-surface)">SCHRANK</text>
+          ${isWo
+            ? `<circle cx="200" cy="110" r="18" fill="${tint}" stroke="${accent}" stroke-width="2" />
+               <text x="200" y="144" text-anchor="middle" font-family="var(--font-label)" font-size="11" font-weight="600" fill="${accent}">sitzt (Dativ)</text>`
+            : `<circle cx="200" cy="48" r="14" fill="${tint}" stroke="${accent}" stroke-width="2" stroke-dasharray="4 3" />
+               <path d="M 200 66 L 200 122" fill="none" stroke="${accent}" stroke-width="2.5" marker-end="url(#arrowHead)" />
+               <text x="200" y="144" text-anchor="middle" font-family="var(--font-label)" font-size="11" font-weight="600" fill="${accent}">setzt A -> B (Akk.)</text>`
+          }
+        `;
+      } else if (pair.type === `hang`) {
+        graphic = `
+          <line x1="60" y1="45" x2="340" y2="45" stroke="var(--outline)" stroke-width="2" />
+          <circle cx="200" cy="45" r="7" fill="var(--surface-container-high)" stroke="var(--outline)" stroke-width="2" />
+          <text x="200" y="32" text-anchor="middle" font-family="var(--font-label)" font-size="11" fill="var(--on-surface)">SCHLÜSSEL / HAKEN</text>
+          ${isWo
+            ? `<polygon points="186,60 214,60 220,145 180,145" fill="${tint}" stroke="${accent}" stroke-width="2" />
+               <text x="200" y="110" text-anchor="middle" font-family="var(--font-label)" font-size="11" font-weight="600" fill="${accent}">hängt</text>`
+            : `<polygon points="90,85 114,85 118,145 86,145" fill="${tint}" stroke="${accent}" stroke-width="2" stroke-dasharray="4 3" />
+               <path d="M 124 105 Q 160 72 192 60" fill="none" stroke="${accent}" stroke-width="2.5" marker-end="url(#arrowHead)" />
+               <text x="248" y="102" font-family="var(--font-label)" font-size="11" font-weight="600" fill="${accent}">hängt A -> B</text>`
+          }
+        `;
+      } else {
+        graphic = `
+          <rect x="120" y="55" width="160" height="52" rx="4" fill="var(--surface-container-high)" stroke="var(--outline)" stroke-width="2" />
+          <text x="200" y="85" text-anchor="middle" font-family="var(--font-label)" font-size="11" fill="var(--on-surface)">DER SESSEL</text>
+          <rect x="150" y="122" width="100" height="24" rx="2" fill="var(--case-dat-bg)" stroke="var(--case-dat)" stroke-width="2" />
+          <text x="200" y="138" text-anchor="middle" font-family="var(--font-label)" font-size="11" font-weight="600" fill="var(--case-dat)">BUCH (unter dem)</text>
+        `;
+      }
+
+      stage.innerHTML = `
+        <svg viewBox="0 0 400 175" aria-hidden="true">
+          <defs>
+            <marker id="arrowHead" markerWidth="8" markerHeight="8" refX="6" refY="4" orient="auto">
+              <path d="M 0 0 L 8 4 L 0 8 z" fill="${accent}" />
+            </marker>
+          </defs>
+          <rect x="6" y="6" width="388" height="163" rx="6" fill="var(--surface-container-low)" stroke="var(--outline-variant)" />
+          <text x="20" y="26" font-family="var(--font-label)" font-size="10" font-weight="600" fill="${accent}">${modeTag}</text>
+          ${graphic}
+        </svg>
+      `;
+
+      readout.innerHTML = `
+        <div class="sentence-stage" style="padding: var(--space-md);">
+          <span>` + data.sentence + `</span>
+        </div>
+        <p class="kpi-sub"><strong>` + pair.title + `:</strong> ` + data.en + `</p>
+      `;
+    }
+
+    function setSpatialPair(idx, btn) {
+      appState.spatialIdx = idx;
+      const parent = btn ? btn.parentElement : null;
+      if (parent) {
+        parent.querySelectorAll(`.filter-pill`).forEach(function (b) { b.classList.remove(`active`); });
+      }
+      if (btn) btn.classList.add(`active`);
+      renderSpatialLab();
+      saveState();
+    }
+
+    function setSpatialMode(mode) {
+      appState.spatialMode = mode;
+      renderSpatialLab();
+      saveState();
+    }
+
+    /* ============================================================
+       6. SECTION 05: WEGBESCHREIBUNG INTERACTIVE MAP
+       ============================================================ */
+    function renderDirectionMap() {
+      const wrap = document.getElementById(`direction-map-wrap`);
+      const qBox = document.getElementById(`route-question-box`);
+      const list = document.getElementById(`route-steps-list`);
+      if (!wrap || !qBox || !list) return;
+
+      const route = ROUTES[appState.routeIdx] || ROUTES[0];
+      const stepIdx = Math.min(appState.routeStepIdx, route.steps.length - 1);
+      const activeStep = route.steps[stepIdx];
+
+      wrap.innerHTML = `
+        <svg viewBox="0 0 560 320" aria-hidden="true">
+          <rect x="0" y="0" width="560" height="320" fill="var(--background)" />
+          <!-- Roads -->
+          <rect x="130" y="20" width="20" height="280" fill="var(--surface-container-high)" />
+          <rect x="270" y="20" width="20" height="280" fill="var(--surface-container-high)" />
+          <rect x="370" y="20" width="20" height="280" fill="var(--surface-container-high)" />
+          <rect x="470" y="20" width="20" height="280" fill="var(--surface-container-high)" />
+          <rect x="30" y="120" width="500" height="20" fill="var(--surface-container-high)" />
+          <rect x="30" y="240" width="500" height="20" fill="var(--surface-container-high)" />
+
+          <!-- Street Names -->
+          <text x="215" y="134" font-family="var(--font-label)" font-size="9" fill="var(--on-surface-variant)">MARKTSTRASSE</text>
+          <text x="195" y="254" font-family="var(--font-label)" font-size="9" fill="var(--on-surface-variant)">HAUPTSTRASSE</text>
+          <text x="284" y="205" transform="rotate(-90 284 205)" font-family="var(--font-label)" font-size="9" fill="var(--on-surface-variant)">NEUE STRASSE</text>
+          <text x="384" y="205" transform="rotate(-90 384 205)" font-family="var(--font-label)" font-size="9" fill="var(--on-surface-variant)">PARKSTRASSE</text>
+
+          <!-- Traffic Lights (Ampeln) -->
+          <circle cx="140" cy="250" r="5" fill="var(--primary-container)" stroke="var(--outline)" stroke-width="1.5" />
+          <circle cx="280" cy="250" r="5" fill="var(--primary-container)" stroke="var(--outline)" stroke-width="1.5" />
+          <circle cx="380" cy="250" r="5" fill="var(--primary-container)" stroke="var(--outline)" stroke-width="1.5" />
+          <circle cx="480" cy="250" r="5" fill="var(--primary-container)" stroke="var(--outline)" stroke-width="1.5" />
+          <circle cx="280" cy="130" r="5" fill="var(--primary-container)" stroke="var(--outline)" stroke-width="1.5" />
+          <circle cx="380" cy="130" r="5" fill="var(--primary-container)" stroke="var(--outline)" stroke-width="1.5" />
+
+          <!-- Landmarks -->
+          <rect x="35" y="220" width="82" height="52" rx="4" fill="var(--surface-container-low)" stroke="var(--outline)" stroke-width="1.5" />
+          <text x="76" y="250" text-anchor="middle" font-family="var(--font-body)" font-size="11" font-weight="700" fill="var(--on-surface)">Bahnhof</text>
+
+          <rect x="445" y="268" width="82" height="42" rx="4" fill="var(--surface-container-low)" stroke="var(--outline)" stroke-width="1.5" />
+          <text x="486" y="293" text-anchor="middle" font-family="var(--font-body)" font-size="11" font-weight="700" fill="var(--on-surface)">Stadion</text>
+
+          <rect x="195" y="148" width="70" height="40" rx="4" fill="var(--surface-container-low)" stroke="var(--outline)" stroke-width="1.5" />
+          <text x="230" y="172" text-anchor="middle" font-family="var(--font-body)" font-size="11" font-weight="700" fill="var(--on-surface)">Café</text>
+
+          <rect x="296" y="80" width="70" height="36" rx="4" fill="var(--surface-container-low)" stroke="var(--outline)" stroke-width="1.5" />
+          <text x="331" y="102" text-anchor="middle" font-family="var(--font-body)" font-size="11" font-weight="700" fill="var(--on-surface)">Spielplatz</text>
+
+          <rect x="396" y="165" width="66" height="38" rx="4" fill="var(--surface-container-low)" stroke="var(--outline)" stroke-width="1.5" />
+          <text x="429" y="188" text-anchor="middle" font-family="var(--font-body)" font-size="11" font-weight="700" fill="var(--on-surface)">Post</text>
+
+          <rect x="396" y="212" width="72" height="28" rx="4" fill="var(--surface-container-low)" stroke="var(--outline)" stroke-width="1.5" />
+          <text x="432" y="230" text-anchor="middle" font-family="var(--font-body)" font-size="11" font-weight="700" fill="var(--on-surface)">Apotheke</text>
+
+          <rect x="160" y="65" width="96" height="46" rx="4" fill="var(--surface-container-low)" stroke="var(--outline)" stroke-width="1.5" />
+          <text x="208" y="86" text-anchor="middle" font-family="var(--font-body)" font-size="10" font-weight="700" fill="var(--on-surface)">Bank / Polizei</text>
+          <text x="208" y="101" text-anchor="middle" font-family="var(--font-label)" font-size="9" fill="var(--on-surface-variant)">Quiz Target</text>
+
+          <!-- Active Route Trace -->
+          <path d="` + activeStep.path + `" fill="none" stroke="var(--case-dat)" stroke-width="4.5" stroke-linecap="round" stroke-linejoin="round" />
+          <circle cx="` + activeStep.dot[0] + `" cy="` + activeStep.dot[1] + `" r="8" fill="var(--case-dat)" stroke="var(--surface-container-low)" stroke-width="2.5" />
+        </svg>
+      `;
+
+      qBox.innerHTML = `
+        <span class="aside-title">Prompt Question</span>
+        <p><strong>` + route.question + `</strong></p>
+        <p class="kpi-sub">` + route.answerIntro + `</p>
+      `;
+
+      list.innerHTML = route.steps.map(function (st, i) {
+        const activeClass = i === stepIdx ? ` active-step` : ``;
+        return `<button type="button" class="route-step` + activeClass + `" onclick="selectRouteStep(` + i + `)">
+          <span class="index-num">0` + (i + 1) + `</span>
+          <span>` + st.text + `</span>
+        </button>`;
+      }).join(``);
+    }
+
+    function selectRoute(idx, btn) {
+      appState.routeIdx = idx;
+      appState.routeStepIdx = 0;
+      const parent = btn ? btn.parentElement : null;
+      if (parent) {
+        parent.querySelectorAll(`.filter-pill`).forEach(function (b) { b.classList.remove(`active`); });
+      }
+      if (btn) btn.classList.add(`active`);
+      renderDirectionMap();
+      saveState();
+    }
+
+    function selectRouteStep(stepIdx) {
+      appState.routeStepIdx = stepIdx;
+      renderDirectionMap();
+      saveState();
+    }
+
+    /* ============================================================
+       7. SECTION 06: PERFEKT STEM BUILDER
+       ============================================================ */
+    function renderPerfektBuilder() {
+      const sel = document.getElementById(`perfekt-verb-select`);
+      const stage = document.getElementById(`perfekt-builder-stage`);
+      const note = document.getElementById(`perfekt-builder-note`);
+      if (!stage || !note) return;
+      if (sel) sel.value = String(appState.perfektIdx);
+
+      const v = PERFEKT_VERBS[appState.perfektIdx] || PERFEKT_VERBS[0];
+      stage.innerHTML = `
+        <span class="slot-pill">` + v.inf + `</span>
+        <span>&rarr;</span>
+        <span class="slot-pill slot-prefix">ge-</span>
+        <span>+</span>
+        <span class="slot-pill slot-verb">` + v.stem + `</span>
+        <span>+</span>
+        <span class="slot-pill slot-prefix">-` + v.end + `</span>
+        <span>=</span>
+        <span class="slot-pill"><strong>` + v.partizip + `</strong></span>
+      `;
+      note.innerHTML = `
+        <span class="aside-title">Formation Rule</span>
+        <p><strong>` + v.ex + `</strong></p>
+        <p class="kpi-sub">` + v.rule + `</p>
+      `;
+    }
+
+    function updatePerfektBuilder() {
+      const sel = document.getElementById(`perfekt-verb-select`);
+      if (sel) appState.perfektIdx = parseInt(sel.value, 10) || 0;
+      renderPerfektBuilder();
+      saveState();
+    }
+
+    /* ============================================================
+       8. INLINE DRILLS RENDERER
+       ============================================================ */
+    function renderDrillGroup(key, containerId, scoreId) {
+      const container = document.getElementById(containerId);
+      const scoreEl = document.getElementById(scoreId);
+      if (!container) return;
+      const items = DRILLS[key] || [];
+      let answeredCount = 0;
+
+      container.innerHTML = items.map(function (item) {
+        const saved = appState.drillAnswers[item.id];
+        if (saved) answeredCount++;
+
+        const btns = item.opts.map(function (opt, idx) {
+          let cls = `option-btn`;
+          if (saved && saved.choice === idx) {
+            cls += saved.correct ? ` selected-correct` : ` selected-wrong`;
+          } else if (saved && idx === item.ans) {
+            cls += ` selected-correct`;
+          }
+          return `<button type="button" class="` + cls + `" onclick="answerDrill('` + key + `', '` + item.id + `', ` + idx + `)">` + opt + `</button>`;
+        }).join(``);
+
+        let fbClass = `drill-feedback`;
+        let fbText = ``;
+        if (saved) {
+          fbClass += ` visible ` + (saved.correct ? `ok` : `err`);
+          fbText = (saved.correct ? `Correct: ` : `Review: `) + item.exp;
+        }
+
+        return `
+          <div class="drill-item">
+            <div class="drill-prompt">` + item.prompt + `</div>
+            <div class="drill-options">` + btns + `</div>
+            <div class="` + fbClass + `">` + fbText + `</div>
+          </div>
+        `;
+      }).join(``);
+
+      if (scoreEl) scoreEl.textContent = answeredCount + ` / ` + items.length + ` answered`;
+    }
+
+    function answerDrill(groupKey, itemId, choiceIdx) {
+      const list = DRILLS[groupKey] || [];
+      const item = list.find(function (x) { return x.id === itemId; });
+      if (!item) return;
+
+      appState.drillAnswers[itemId] = {
+        choice: choiceIdx,
+        correct: choiceIdx === item.ans
+      };
+
+      const map = {
+        sep: [`drill-sep-container`, `drill-sep-score`],
+        prep: [`drill-prep-container`, `drill-prep-score`],
+        wechsel: [`drill-wechsel-container`, `drill-wechsel-score`],
+        dir: [`drill-dir-container`, `drill-dir-score`],
+        perf: [`drill-perf-container`, `drill-perf-score`]
+      };
+      const pair = map[groupKey];
+      if (pair) renderDrillGroup(groupKey, pair[0], pair[1]);
+      updateKPIs();
+      saveState();
+    }
+
+    function renderAllDrills() {
+      renderDrillGroup(`sep`, `drill-sep-container`, `drill-sep-score`);
+      renderDrillGroup(`prep`, `drill-prep-container`, `drill-prep-score`);
+      renderDrillGroup(`wechsel`, `drill-wechsel-container`, `drill-wechsel-score`);
+      renderDrillGroup(`dir`, `drill-dir-container`, `drill-dir-score`);
+      renderDrillGroup(`perf`, `drill-perf-container`, `drill-perf-score`);
+    }
+
+    /* ============================================================
+       9. SECTION 07: FLASHCARD ENGINE
+       ============================================================ */
+    function getFilteredFlashcards() {
+      if (appState.fcFilter === `all`) return FLASHCARDS;
+      return FLASHCARDS.filter(function (c) { return c.cat === appState.fcFilter; });
+    }
+
+    function renderFlashcard() {
+      const cards = getFilteredFlashcards();
+      if (cards.length === 0) return;
+      if (appState.fcIndex >= cards.length) appState.fcIndex = 0;
+      if (appState.fcIndex < 0) appState.fcIndex = cards.length - 1;
+
+      const card = cards[appState.fcIndex];
+      const box = document.getElementById(`flashcard-box`);
+      const tag = document.getElementById(`fc-topic-tag`);
+      const counter = document.getElementById(`fc-counter`);
+      const front = document.getElementById(`fc-front`);
+      const back = document.getElementById(`fc-back`);
+      const ansText = document.getElementById(`fc-answer-text`);
+      const ruleNote = document.getElementById(`fc-rule-note`);
+      const hint = document.getElementById(`fc-flip-hint`);
+      const statusLabel = document.getElementById(`fc-status-label`);
+
+      if (!box || !front || !back) return;
+
+      box.classList.toggle(`flipped`, appState.fcFlipped);
+      if (tag) tag.textContent = card.catLabel;
+      if (counter) counter.textContent = `Card ` + (appState.fcIndex + 1) + ` of ` + cards.length;
+      front.textContent = card.front;
+      if (ansText) ansText.textContent = card.ans;
+      if (ruleNote) ruleNote.textContent = card.note;
+
+      back.style.display = appState.fcFlipped ? `flex` : `none`;
+      if (hint) hint.textContent = appState.fcFlipped ? `Click card to hide answer` : `Click or press Space to reveal answer`;
+
+      const isMastered = appState.fcMastered.indexOf(card.id) !== -1;
+      if (statusLabel) {
+        statusLabel.textContent = isMastered ? `STATUS: MASTERED` : `STATUS: STUDYING`;
+      }
+    }
+
+    function flipFlashcard() {
+      appState.fcFlipped = !appState.fcFlipped;
+      renderFlashcard();
+      saveState();
+    }
+
+    function handleFlashcardKey(e) {
+      if (e.key === ` ` || e.key === `Enter`) {
+        e.preventDefault();
+        flipFlashcard();
+      }
+    }
+
+    function nextFlashcard() {
+      const cards = getFilteredFlashcards();
+      appState.fcIndex = (appState.fcIndex + 1) % cards.length;
+      appState.fcFlipped = false;
+      renderFlashcard();
+      saveState();
+    }
+
+    function prevFlashcard() {
+      const cards = getFilteredFlashcards();
+      appState.fcIndex = (appState.fcIndex - 1 + cards.length) % cards.length;
+      appState.fcFlipped = false;
+      renderFlashcard();
+      saveState();
+    }
+
+    function filterFlashcards(cat, btn) {
+      appState.fcFilter = cat;
+      appState.fcIndex = 0;
+      appState.fcFlipped = false;
+      const parent = btn ? btn.parentElement : null;
+      if (parent) {
+        parent.querySelectorAll(`.filter-pill`).forEach(function (b) { b.classList.remove(`active`); });
+      }
+      if (btn) btn.classList.add(`active`);
+      renderFlashcard();
+      saveState();
+    }
+
+    function markFlashcard(mastered) {
+      const cards = getFilteredFlashcards();
+      const card = cards[appState.fcIndex];
+      if (!card) return;
+      const pos = appState.fcMastered.indexOf(card.id);
+      if (mastered && pos === -1) {
+        appState.fcMastered.push(card.id);
+      } else if (!mastered && pos !== -1) {
+        appState.fcMastered.splice(pos, 1);
+      }
+      updateKPIs();
+      nextFlashcard();
+    }
+
+    /* ============================================================
+       10. SECTION 08: 20-QUESTION MIDTERM QUIZ
+       ============================================================ */
+    function renderQuiz() {
+      const container = document.getElementById(`quiz-questions-container`);
+      const masteryList = document.getElementById(`quiz-mastery-list`);
+      const summaryText = document.getElementById(`quiz-summary-text`);
+      if (!container || !masteryList) return;
+
+      const items = appState.quizFilter === `missed`
+        ? QUIZ_QUESTIONS.filter(function (q) {
+            const a = appState.quizAnswers[q.id];
+            return a && !a.correct;
+          })
+        : QUIZ_QUESTIONS;
+
+      if (items.length === 0) {
+        container.innerHTML = `<div class="figure-card"><p><strong>No missed questions yet.</strong> Switch back to "All 20 Questions" or answer questions below.</p></div>`;
+      } else {
+        container.innerHTML = items.map(function (q) {
+          const saved = appState.quizAnswers[q.id];
+          const optsHtml = q.opts.map(function (opt, idx) {
+            let cls = `option-btn`;
+            if (saved && saved.choice === idx) {
+              cls += saved.correct ? ` selected-correct` : ` selected-wrong`;
+            } else if (saved && idx === q.ans) {
+              cls += ` selected-correct`;
+            }
+            return `<button type="button" class="` + cls + `" onclick="answerQuiz('` + q.id + `', ` + idx + `)">` + opt + `</button>`;
+          }).join(``);
+
+          let fbClass = `drill-feedback`;
+          let fbText = ``;
+          if (saved) {
+            fbClass += ` visible ` + (saved.correct ? `ok` : `err`);
+            fbText = (saved.correct ? `Correct: ` : `Incorrect: `) + q.exp;
+          }
+
+          return `
+            <div class="drill-item">
+              <div style="display: flex; justify-content: space-between; align-items: center;">
+                <span class="dossier-meta">` + q.topic + `</span>
+              </div>
+              <div class="drill-prompt">` + q.prompt + `</div>
+              <div class="drill-options">` + optsHtml + `</div>
+              <div class="` + fbClass + `">` + fbText + `</div>
+            </div>
+          `;
+        }).join(``);
+      }
+
+      /* Topic Mastery Bars */
+      const topics = [`Separable Verbs`, `Akkusativ vs. Dativ`, `Wo vs. Wohin & Verbs`, `Wegbeschreibung`, `Perfekt`];
+      masteryList.innerHTML = topics.map(function (t) {
+        const qs = QUIZ_QUESTIONS.filter(function (q) { return q.topic === t; });
+        const correct = qs.filter(function (q) {
+          const a = appState.quizAnswers[q.id];
+          return a && a.correct;
+        }).length;
+        const pct = Math.round((correct / qs.length) * 100);
+        return `
+          <div class="mastery-row">
+            <span><strong>` + t + `</strong></span>
+            <div class="mastery-track"><div class="mastery-fill" style="width: ` + pct + `%;"></div></div>
+            <span class="mono">` + correct + `/` + qs.length + `</span>
+          </div>
+        `;
+      }).join(``);
+
+      const answered = Object.keys(appState.quizAnswers).length;
+      const right = Object.keys(appState.quizAnswers).filter(function (id) { return appState.quizAnswers[id].correct; }).length;
+      if (summaryText) {
+        summaryText.textContent = answered === 0
+          ? `Select an option on any question below to begin grading.`
+          : `Current score: ` + right + ` of ` + answered + ` answered (` + Math.round((right / QUIZ_QUESTIONS.length) * 100) + `% of full 20-item exam).`;
+      }
+    }
+
+    function answerQuiz(qId, choiceIdx) {
+      const q = QUIZ_QUESTIONS.find(function (item) { return item.id === qId; });
+      if (!q) return;
+      appState.quizAnswers[qId] = {
+        choice: choiceIdx,
+        correct: choiceIdx === q.ans
+      };
+      renderQuiz();
+      updateKPIs();
+      saveState();
+    }
+
+    function filterQuiz(mode, btn) {
+      appState.quizFilter = mode;
+      const parent = btn ? btn.parentElement : null;
+      if (parent) {
+        parent.querySelectorAll(`.filter-pill`).forEach(function (b) { b.classList.remove(`active`); });
+      }
+      if (btn) btn.classList.add(`active`);
+      renderQuiz();
+      saveState();
+    }
+
+    function handleRetakeQuiz(btn) {
+      if (btn.dataset.armed !== `true`) {
+        btn.dataset.armed = `true`;
+        btn.textContent = `Click again to clear quiz`;
+        return;
+      }
+      btn.dataset.armed = `false`;
+      btn.textContent = `Retake Quiz`;
+      appState.quizAnswers = {};
+      appState.quizFilter = `all`;
+      renderQuiz();
+      updateKPIs();
+      saveState();
+    }
+
+    function handleResetProgress(btn) {
+      if (btn.dataset.armed !== `true`) {
+        btn.dataset.armed = `true`;
+        btn.textContent = `Click again to reset all`;
+        return;
+      }
+      btn.dataset.armed = `false`;
+      btn.textContent = `Reset Progress`;
+      appState.drillAnswers = {};
+      appState.quizAnswers = {};
+      appState.fcMastered = [];
+      appState.fcIndex = 0;
+      appState.fcFlipped = false;
+      renderAllDrills();
+      renderFlashcard();
+      renderQuiz();
+      updateKPIs();
+      saveState();
+    }
+
+    /* ============================================================
+       11. INITIALIZATION & GEMINI NOTEBOOK SHIM SYNC
+       ============================================================ */
+    async function initApp() {
+      try {
+        if (window.notebookAppApi && typeof window.notebookAppApi.getAppState === `function`) {
+          const saved = await window.notebookAppApi.getAppState();
+          if (saved && typeof saved === `object`) {
+            appState = Object.assign({}, appState, saved);
+          }
+        }
+      } catch (e) {}
+
+      const nounSel = document.getElementById(`noun-select`);
+      if (nounSel) nounSel.value = String(appState.nounIdx || 0);
+
+      renderArticleTable();
+      updateNounTransformer();
+      renderSepLab();
+      renderSpatialLab();
+      renderDirectionMap();
+      renderPerfektBuilder();
+      renderAllDrills();
+      renderFlashcard();
+      renderQuiz();
+      updateKPIs();
+
+      if (window.notebookAppApi && typeof window.notebookAppApi.notifyAppReady === `function`) {
+        window.notebookAppApi.notifyAppReady();
+      }
+    }
+
+    document.addEventListener(`DOMContentLoaded`, initApp);
+  </script>
+</body>
+</html>
